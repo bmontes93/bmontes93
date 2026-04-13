@@ -20,7 +20,7 @@
 
 ---
 
-## 👋 About Me
+##  About Me
 
 I design and build **complex, production-ready systems** — from high-throughput e-commerce platforms to state-of-the-art AI pipelines. My work is defined by three core principles:
 
@@ -30,9 +30,9 @@ I design and build **complex, production-ready systems** — from high-throughpu
 
 ---
 
-## 🚀 Highlighted Projects
+##  Highlighted Projects
 
-### 🛍 [Sheinclon](https://github.com/bmontes93/Sheinclon) — Full-Stack E-commerce Platform
+###  [Sheinclon](https://github.com/bmontes93/Sheinclon) — Full-Stack E-commerce Platform
 > **TypeScript · Node.js · TypeORM · SQLite · React · Vite**
 
 A high-fidelity Shein clone built for **performance and scalability**. Migrated from MongoDB to a relational SQL architecture with TypeORM for a more robust data model. Features include:
@@ -43,7 +43,7 @@ A high-fidelity Shein clone built for **performance and scalability**. Migrated 
 
 ---
 
-### 🤖 [EXON-FACE](https://github.com/bmontes93/EXON-FACE) — High-Performance Computer Vision System
+###  [EXON-FACE](https://github.com/bmontes93/EXON-FACE) — High-Performance Computer Vision System
 > **Python · ONNX Runtime · OpenCV · InsightFace · BiSeNet · Gradio · Docker**
 
 A state-of-the-art face-swapping engine engineered for **cinema-quality output**, built on top of the InsightFace model suite.
@@ -54,7 +54,7 @@ A state-of-the-art face-swapping engine engineered for **cinema-quality output**
 
 ---
 
-### 🏋️ [TAHUAGYM](https://github.com/bmontes93/TAHUAGYM) — Premium Fitness Management Platform
+###  [TAHUAGYM](https://github.com/bmontes93/TAHUAGYM) — Premium Fitness Management Platform
 > **Next.js 16 · TypeScript · TailwindCSS · Three.js · React Three Fiber · Framer Motion · GSAP**
 
 A visually stunning web platform for a premium training center in Huaraz, Perú. Achieved **Lighthouse 95+ Performance Score**.
@@ -65,7 +65,7 @@ A visually stunning web platform for a premium training center in Huaraz, Perú.
 
 ---
 
-### 🏪 [GEST E-Commerce](https://github.com/bmontes93/GEST-E-COMERCE) — Microservices E-commerce Solution
+###  [GEST E-Commerce](https://github.com/bmontes93/GEST-E-COMERCE) — Microservices E-commerce Solution
 > **TypeScript · React · Vite · Python · FastAPI · Docker · Docker Compose · JWT**
 
 A robust, decoupled commerce infrastructure designed with **enterprise-grade separation of concerns**.
@@ -76,14 +76,14 @@ A robust, decoupled commerce infrastructure designed with **enterprise-grade sep
 
 ---
 
-### 💼 [CHAMBEAFACIL](https://github.com/bmontes93/CHAMBEAFACIL) — Job Market Platform
+###  [CHAMBEAFACIL](https://github.com/bmontes93/CHAMBEAFACIL) — Job Market Platform
 > **JavaScript · Full-Stack**
 
 A scalable digital marketplace connecting employers and workers, focused on the Peruvian market.
 
 ---
 
-## 🛠 Technology Stack
+##  Technology Stack
 
 <p align="left">
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
@@ -105,7 +105,7 @@ A scalable digital marketplace connecting employers and workers, focused on the 
 
 ---
 
-## 📊 GitHub Metrics
+##  GitHub Metrics
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=bmontes93&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=1f6feb" height="165" alt="GitHub Stats"/>
