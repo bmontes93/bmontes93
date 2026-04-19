@@ -32,17 +32,6 @@ I design and build **complex, production-ready systems** — from high-throughpu
 
 ##  Highlighted Projects
 
-###  [Sheinclon](https://github.com/bmontes93/Sheinclon) — Full-Stack E-commerce Platform
-> **TypeScript · Node.js · TypeORM · SQLite · React · Vite**
-
-A high-fidelity Shein clone built for **performance and scalability**. Migrated from MongoDB to a relational SQL architecture with TypeORM for a more robust data model. Features include:
-
-- 🎬 **Cinematics UI** — Blur-up image loading, animated product cards (hover zoom + alternate angle reveal), and editorial-style layouts.
-- 🛒 **Full E-commerce Engine** — Dynamic catalog with real-time filtering, persistent shopping cart, wishlist, variant management (size/color), discount coupon system, and a user review module.
-- 🔒 **TypeScript Full-Stack** — Strict static typing across frontend and backend for maximum safety and maintainability.
-
----
-
 ###  [EXON-FACE](https://github.com/bmontes93/EXON-FACE) — High-Performance Computer Vision System
 > **Python · ONNX Runtime · OpenCV · InsightFace · BiSeNet · Gradio · Docker**
 
@@ -51,6 +40,17 @@ A state-of-the-art face-swapping engine engineered for **cinema-quality output**
 - 🧠 **Precision AI Pipeline** — BiSeNet segmentation for pixel-perfect facial masking (eyes, mouth, skin). CodeFormer + GFPGAN post-processing enhancers for low-resolution face restoration.
 - ⚙️ **Hardware-Agnostic Acceleration** — ONNX Runtime with pre-tuned NVIDIA CUDA support and FP16 inference profiles (Cinema / Balanced / Fast).
 - 🐳 **Production-Ready** — Dockerized environment, one-click `.bat` installer, CLI + Gradio GUI for both casual and automated usage.
+
+---
+
+###  [Sheinclon](https://github.com/bmontes93/Sheinclon) — Full-Stack E-commerce Platform
+> **TypeScript · Node.js · TypeORM · SQLite · React · Vite**
+
+A high-fidelity Shein clone built for **performance and scalability**. Migrated from MongoDB to a relational SQL architecture with TypeORM for a more robust data model. Features include:
+
+- 🎬 **Cinematics UI** — Blur-up image loading, animated product cards (hover zoom + alternate angle reveal), and editorial-style layouts.
+- 🛒 **Full E-commerce Engine** — Dynamic catalog with real-time filtering, persistent shopping cart, wishlist, variant management (size/color), discount coupon system, and a user review module.
+- 🔒 **TypeScript Full-Stack** — Strict static typing across frontend and backend for maximum safety and maintainability.
 
 ---
 
@@ -80,6 +80,23 @@ A robust, decoupled commerce infrastructure designed with **enterprise-grade sep
 > **JavaScript · Full-Stack**
 
 A scalable digital marketplace connecting employers and workers, focused on the Peruvian market.
+
+---
+
+###  [Calc101](https://github.com/bmontes93/Calc101) — Symbolic Mathematics Engine
+> **Python · FastAPI · React · TypeScript · SymPy · Docker**
+
+Web-first symbolic mathematics engine providing step-by-step solutions with an ultra-responsive interface. 
+
+- 🧮 **Advanced Computation Engine** — Features integral/derivative solvers, matrix algebra manipulation, equation systems, and Taylor series expansion.
+- ⚡ **Real-Time Render** — Instantly parses and displays complex algebraic transformations using live LaTeX rendering.
+
+---
+
+###  [Cientific-Calc](https://github.com/bmontes93/Cientific-Calc) — Scientific Calculator
+> **JavaScript**
+
+Browser-based scientific calculator providing advanced mathematical operations within a polished, modern, and mobile-responsive web interface.
 
 ---
 
