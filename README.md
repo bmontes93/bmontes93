@@ -43,6 +43,18 @@ A state-of-the-art face-swapping engine engineered for **cinema-quality output**
 
 ---
 
+###  [ALL-DAY](https://github.com/bmontes93/ALL-DAY) — Plataforma SaaS de Gestión de Eventos
+> **Next.js 15 · React 19 · TypeScript · TailwindCSS v4 · PostgreSQL · Prisma ORM · NextAuth.js · Pusher · Resend · Culqi**
+
+Plataforma integral de gestión de eventos y conexión con proveedores locales en Huaraz (SaaS). Ofrece pagos seguros, notificaciones y gamificación.
+
+- 🛡️ **Ecosistema Seguro** — Verificación de proveedores (DNI + reconocimiento facial) y sistema de mensajería interna con privacidad anti-stalking.
+- 📅 **Gestión de Reservas** — Flujo interactivo con control de disponibilidad en tiempo real, validaciones con Zod y pagos divididos en dos partes (50% de depósito inicial) integrados con Culqi.
+- 🔔 **Notificaciones Multicanal** — Alertas Push nativas vía Service Workers, avisos in-app en tiempo real con Sonner y correos electrónicos transaccionales profesionales vía Resend.
+- 🏆 **Gamificación y Fidelización** — Progreso por niveles de usuario (Bronce, Plata, Oro, VIP) y acumulación de puntos por eventos completados.
+
+---
+
 ###  [Sheinclon](https://github.com/bmontes93/Sheinclon) — Full-Stack E-commerce Platform
 > **TypeScript · Node.js · TypeORM · SQLite · React · Vite**
 
@@ -65,6 +77,18 @@ A visually stunning web platform for a premium training center in Huaraz, Perú.
 
 ---
 
+###  [CALC101NG](https://github.com/bmontes93/CALC101NG) — Plataforma Matemática Simbólica
+> **React 19 · TypeScript · Vite · MathLive · Function-Plot · Python · FastAPI · SymPy · Docker**
+
+Plataforma matemática inteligente de nueva generación. Resuelve derivadas, integrales, ecuaciones y sistemas con pasos detallados y gráficas interactivas.
+
+- 🧮 **Editor WYSIWYG Nativo** — Teclado matemático virtual con MathLive para escribir fórmulas (integrales, fracciones, matrices) de forma natural y matemática.
+- 📈 **Gráficas Dinámicas** — Visualización automática 2D interactiva de ecuaciones, inecuaciones y regiones sombreadas mediante Function-Plot.
+- ⚡ **Motor Asíncrono de Alta Velocidad** — API construida sobre FastAPI y SymPy para el cálculo y simplificación matemática simbólica en milisegundos.
+- 🎨 **Diseño Premium Glassmorphism** — Interfaz inmersiva con modo oscuro nativo y micro-interacciones interactivas fluidas usando Framer Motion.
+
+---
+
 ###  [GEST E-Commerce](https://github.com/bmontes93/GEST-E-COMERCE) — Microservices E-commerce Solution
 > **TypeScript · React · Vite · Python · FastAPI · Docker · Docker Compose · JWT**
 
@@ -76,20 +100,32 @@ A robust, decoupled commerce infrastructure designed with **enterprise-grade sep
 
 ---
 
+###  [quantslot-sdk](https://github.com/bmontes93/quantslot-sdk) — QuantSlot Math Engine & RTP API
+> **Node.js · Express · Monte Carlo Simulations · Cryptographic RNG (CSPRNG)**
+
+Motor matemático y backend de simulación estocástica de alto rendimiento para la industria de iGaming (tragamonedas / slots) diseñado bajo estándares de certificación internacional.
+
+- 🎲 **Simulador Monte Carlo** — Capacidad para ejecutar millones de giros en segundos para validar métricas clave de juego, frecuencia de aciertos (hit frequency) y porcentaje de RTP.
+- ⚙️ **Mecánicas Complejas** — Soporte nativo para Cluster-Pay (cuadrículas 5x5), cascadas infinitas, multiplicadores y bonificaciones multinivel.
+- 🔒 **Seguridad CSPRNG** — Generación de números aleatorios criptográficamente seguros para garantizar la aleatoriedad matemática exigida por certificadoras (GLI, iTech Labs).
+
+---
+
+###  [Hide-Clone-USB](https://github.com/bmontes93/Hide-Clone-USB) — USB Auto-Sync Service
+> **PowerShell · Robocopy · Windows Task Scheduler · Event-Driven Architecture**
+
+Servicio silencioso y de alto rendimiento para la sincronización y respaldo automatizado de dispositivos de almacenamiento USB en Windows.
+
+- ⚡ **Arquitectura Orientada a Eventos** — Activación instantánea mediante triggers de eventos del sistema (DriverFrameworks Event ID 2003/2101), eliminando el consumo de CPU por polling en reposo.
+- 🚀 **Copia Multihilo** — Transferencias de archivos masivas ultra-rápidas mediante Robocopy optimizado a 32 hilos (`/MT:32`) y modo de respaldo (`/B`) para archivos protegidos.
+- 👤 **Ejecución Invisible** — Corre como servicio en el contexto de `NT AUTHORITY\SYSTEM` de manera totalmente oculta y sin interfaces de consola molestas para el usuario.
+
+---
+
 ###  [CHAMBEAFACIL](https://github.com/bmontes93/CHAMBEAFACIL) — Job Market Platform
 > **JavaScript · Full-Stack**
 
 A scalable digital marketplace connecting employers and workers, focused on the Peruvian market.
-
----
-
-###  [Calc101](https://github.com/bmontes93/Calc101) — Symbolic Mathematics Engine
-> **Python · FastAPI · React · TypeScript · SymPy · Docker**
-
-Web-first symbolic mathematics engine providing step-by-step solutions with an ultra-responsive interface. 
-
-- 🧮 **Advanced Computation Engine** — Features integral/derivative solvers, matrix algebra manipulation, equation systems, and Taylor series expansion.
-- ⚡ **Real-Time Render** — Instantly parses and displays complex algebraic transformations using live LaTeX rendering.
 
 ---
 
@@ -115,6 +151,9 @@ Browser-based scientific calculator providing advanced mathematical operations w
   <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white"/>
   <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"/>
   <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white"/>
+  <img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white"/>
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"/>
   <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
@@ -125,12 +164,12 @@ Browser-based scientific calculator providing advanced mathematical operations w
 ##  GitHub Metrics
 
 <p align="center">
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=bmontes93&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=1f6feb" height="165" alt="GitHub Stats"/>
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=bmontes93&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" height="165" alt="Top Languages"/>
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=bmontes93&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=1f6feb&count_private=true&include_all_commits=true" height="165" alt="GitHub Stats"/>
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=bmontes93&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&count_private=true" height="165" alt="Top Languages"/>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=bmontes93&theme=tokyonight&hide_border=true&background=0d1117&stroke=58a6ff&ring=1f6feb&fire=ff9300&currStreakLabel=58a6ff" alt="GitHub Streak"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=bmontes93&theme=tokyonight&hide_border=true&background=0d1117&stroke=58a6ff&ring=1f6feb&fire=ff9300&currStreakLabel=58a6ff&count_private=true" alt="GitHub Streak"/>
 </p>
 
 ---
