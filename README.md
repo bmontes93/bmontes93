@@ -43,6 +43,17 @@ A state-of-the-art face-swapping engine engineered for **cinema-quality output**
 
 ---
 
+###  [botpredictor](https://github.com/bmontes93/botpredictor) — Machine Learning Soccer Prediction Pipeline
+> **Python · Playwright · Celery · Redis · PostgreSQL · pandas · NumPy · XGBoost · LightGBM**
+
+Pipeline automatizado de extracción de datos, inferencia probabilística con Machine Learning y alertas de apuestas de valor (*Value Betting*) para fútbol en tiempo real.
+
+- ⚙️ **Arquitectura por Fases** — Ejecución orquestada en base al inicio del evento: T-24 análisis de sentimiento sobre bajas; T-12 captura de cuotas base en bookmakers; T-60 trigger asíncrono para detección de alineaciones oficiales en Sofascore; y T-55 ejecución del modelo de inferencia.
+- 🧠 **Modelado ML Avanzado** — Algoritmos predictivos basados en XGBoost y LightGBM entrenados para determinar probabilidades reales ($P_{bot}$) de mercados de córneres, tarjetas y BTTS + Over 2.5.
+- 📊 **Cálculo de Valor Implícito** — Aplica una formulación de margen de seguridad (`(1 / P_bot) * (1 + alpha) < Cuota_Bookie` con $\alpha = 0.05$) para recomendar alertas únicamente en mercados con valor real frente a las cuotas del mercado.
+
+---
+
 ###  [ALL-DAY](https://github.com/bmontes93/ALL-DAY) — Plataforma SaaS de Gestión de Eventos
 > **Next.js 15 · React 19 · TypeScript · TailwindCSS v4 · PostgreSQL · Prisma ORM · NextAuth.js · Pusher · Resend · Culqi**
 
@@ -52,6 +63,18 @@ Plataforma integral de gestión de eventos y conexión con proveedores locales e
 - 📅 **Gestión de Reservas** — Flujo interactivo con control de disponibilidad en tiempo real, validaciones con Zod y pagos divididos en dos partes (50% de depósito inicial) integrados con Culqi.
 - 🔔 **Notificaciones Multicanal** — Alertas Push nativas vía Service Workers, avisos in-app en tiempo real con Sonner y correos electrónicos transaccionales profesionales vía Resend.
 - 🏆 **Gamificación y Fidelización** — Progreso por niveles de usuario (Bronce, Plata, Oro, VIP) y acumulación de puntos por eventos completados.
+
+---
+
+###  [bots](https://github.com/bmontes93/bots) — Unified Telegram Bots Ecosystem (SaaS)
+> **Python · aiogram 3.0 · FastAPI · PostgreSQL · SQLAlchemy 2.0 · Redis · APScheduler · Docker**
+
+Ecosistema modular SaaS de automatización, verificación de pagos y retención de usuarios para canales privados, conformado por tres bots de Telegram paralelos integrados bajo un backend unificado.
+
+- 🛡️ **Bot de Verificación** — Procesa comprobantes de depósitos/transferencias mediante FSM, delega aprobaciones a grupos de administración con teclados inline y genera enlaces de invitación exclusivos con validación automatizada.
+- 🔄 **Bot de Retención** — Agente en segundo plano (APScheduler) que alerta sobre la expiración inminente de suscripciones (T-3 días y T-1 día), gestiona la expulsión de canales de usuarios inactivos y ejecuta flujos de recuperación automáticos.
+- 📣 **Bot de Marketing** — Consola de difusión publicitaria programable para el envío masivo de campañas de engagement segmentadas por estados de suscripción.
+- 🐳 **Infraestructura de Grado Producción** — Dockerizado completo y desacoplado, orquestando sesiones asíncronas con SQLAlchemy, almacenamiento intermedio (FSM) sobre Redis y base de datos relacional PostgreSQL.
 
 ---
 
@@ -154,6 +177,9 @@ Browser-based scientific calculator providing advanced mathematical operations w
   <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white"/>
   <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white"/>
   <img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white"/>
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"/>
   <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
