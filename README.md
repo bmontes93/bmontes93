@@ -78,7 +78,7 @@ Plataforma integral de gestión de eventos y conexión con proveedores locales e
 Ecosistema modular SaaS de automatización, verificación de pagos y retención de usuarios para canales privados, conformado por tres bots de Telegram paralelos integrados bajo un backend unificado.
 
 - 🛡️ **Bot de Verificación** — Procesa comprobantes de depósitos/transferencias mediante FSM, delega aprobaciones a grupos de administración con teclados inline y genera enlaces de invitación exclusivos con validación automatizada.
-- 🔄 **Bot de Retención** — Agente en segundo plano (APScheduler) que alerta sobre la expiración inminente de suscripciones (T-3 días y T-1 día), gestiona la expulsión de canales de usuarios inactivos y ejecuta flujos de recuperación automáticos.
+- 🔄 **Bot de Retención** — Agente en segundo plano (APScheduler) que alertara sobre la expiración inminente de suscripciones (T-3 días y T-1 día), gestiona la expulsión de canales de usuarios inactivos y ejecuta flujos de recuperación automáticos.
 - 📣 **Bot de Marketing** — Consola de difusión publicitaria programable para el envío masivo de campañas de engagement segmentadas por estados de suscripción.
 - 🐳 **Infraestructura de Grado Producción** — Dockerizado completo y desacoplado, orquestando sesiones asíncronas con SQLAlchemy, almacenamiento intermedio (FSM) sobre Redis y base de datos relacional PostgreSQL.
 
