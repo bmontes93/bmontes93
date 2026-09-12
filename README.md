@@ -221,5 +221,5 @@ Browser-based scientific calculator providing advanced mathematical operations w
 
 <p align="center">
   <i>"Transforming complex requirements into elegant, high-performance engineering."</i><br/>
-  <b>— Thekerdruid · bmontes93</b>
+  <b>— Thekerdruid  ·  bmontes93</b>
 </p>
