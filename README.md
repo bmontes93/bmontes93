@@ -54,8 +54,8 @@ Motor de análisis, segmentación y transposición facial de alta fidelidad dise
 Pipeline analítico continuo para la ingesta de datos en tiempo real, modelado probabilístico de eventos de fútbol internacional y detección de ineficiencias de mercado (*Value Betting*).
 
 * **Orquestación Temporal Estricta:** Pipeline distribuido accionado por ventanas temporales relativas al inicio del evento: análisis de bajas en T-24h, captura de cuotas base en T-12h, extracción reactiva de alineaciones oficiales en T-60min (Sofascore) e inferencia probabilística en T-55min.
-* **Modelado Probabilístico:** Algoritmos supervisados (XGBoost y LightGBM) entrenados con ingeniería de variables históricas para calcular la probabilidad real ($P_{bot}$) sobre mercados de alta liquidez.
-* **Detección de Ventaja Estadística:** Algoritmo cuantitativo con margen de seguridad (`(1 / P_bot) * (1 + alpha) < Cuota_Bookie` con $\alpha = 0.05$), emitiendo alertas operativas únicamente cuando existe un valor esperado positivo (*Edge*).
+* **Modelado Probabilístico:** Algoritmos supervisados (XGBoost y LightGBM) entrenados con ingeniería de variables históricas para calcular la probabilidad real (`P_bot`) sobre mercados de alta liquidez.
+* **Detección de Ventaja Estadística:** Algoritmo cuantitativo con margen de seguridad (`(1 / P_bot) * (1 + α) < Cuota_Bookie` con `α = 0.05`), emitiendo alertas operativas únicamente cuando existe un valor esperado positivo (*Edge*).
 
 ---
 
@@ -70,7 +70,7 @@ Motor matemático de simulación probabilística y certificación de slots digit
 
 ---
 
-### [TAHUAGYM](https://github.com/bmontes93/TAHUAGYM) — Plataforma Web de Alto Rendimiento con Renderizado 3D
+### TAHUAGYM — Plataforma Web de Alto Rendimiento con Renderizado 3D `[🔒 Repositorio Privado / Proyecto Comercial]`
 > **Next.js · TypeScript · Three.js · React Three Fiber · TailwindCSS · Framer Motion · GSAP**
 
 Plataforma web comercial orientada a una experiencia visual cinematográfica y ultra-fluida, alcanzando un índice de rendimiento de **Lighthouse 95+**.
@@ -96,7 +96,7 @@ Arquitectura distribuida para control de accesos, verificación de pagos y reten
 
 ---
 
-#### [ALL-DAY](https://github.com/bmontes93/ALL-DAY) — Plataforma SaaS para Gestión de Eventos
+#### ALL-DAY — Plataforma SaaS para Gestión de Eventos `[🔒 Repositorio Privado / Producción]`
 > **Next.js 15 · React 19 · TypeScript · PostgreSQL · Prisma ORM · Culqi · Resend · Pusher**
 
 Plataforma integral para reservas de eventos y conexión de proveedores:
