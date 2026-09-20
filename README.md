@@ -27,9 +27,9 @@
 
 ## Sobre Mí & Filosofía de Ingeniería
 
-Soy **Bryan Montes**, desarrollador y arquitecto de software enfocado en la construcción de **sistemas de alta concurrencia, pipelines avanzados de Inteligencia Artificial y arquitecturas web de alto rendimiento**. Mi enfoque de ingeniería se estructura en tres principios:
+Soy **Bryan Montes**, desarrollador y arquitecto de software enfocado en la construcción de **sistemas de alta concurrencia, pipelines avanzados de Inteligencia Artificial y arquitecturas web de alto rendimiento**. Mi trabajo combina análisis matemático, optimización a bajo nivel y diseño de infraestructuras desacopladas:
 
-- **Arquitectura Limpia & Modular:** Construcción de sistemas desacoplados, orientados a dominios y basados en microservicios escalables que facilitan la evolución técnica continua.
+- **Arquitectura Limpia & Modular:** Construcción de sistemas desacoplados, orientados a dominios y basados en microservicios escalables que facilitan la evolución técnica continua sin acumulación de deuda técnica.
 - **Rendimiento Extremo:** Optimización rigurosa de latencia: inferencia acelerada con CUDA/FP16, procesamiento asíncrono y tiempos de respuesta sub-segundo con estrategias SSR/SSG.
 - **Experiencias Interactivas 3D:** Integración de gráficos en tiempo real mediante WebGL y Three.js, manteniendo estándares de rendimiento Lighthouse 95+.
 
@@ -46,6 +46,15 @@ Soy **Bryan Montes**, desarrollador y arquitecto de software enfocado en la cons
 
 ---
 
+## Estándares de Ingeniería & Prácticas de Desarrollo
+
+- **Tipado Estricto de Extremo a Extremo:** TypeScript configurado en modo estricto en frontend/Node.js y Python tipado estáticamente con chequeo continuo para prevención temprana de regresiones.
+- **Flujo de Integración y Entrega Continua (CI/CD):** Validación automatizada en cada Pull Request mediante GitHub Actions (análisis estático, linting, tests unitarios y de integración).
+- **Infraestructura Inmutable y Reproducible:** Contenerización exhaustiva con Docker y Docker Compose con builds multi-etapa para generar artefactos mínimos, seguros y portables entre entornos.
+- **Diseño Resiliente:** Manejo defensivo de excepciones, colas de tareas con reintentos exponenciales y observabilidad mediante logging estructurado.
+
+---
+
 ## Proyectos Destacados
 
 ### [EXON-FACE](https://github.com/bmontes93/EXON-FACE) — Sistema de Visión Artificial y Procesamiento Facial
@@ -55,6 +64,15 @@ Soy **Bryan Montes**, desarrollador y arquitecto de software enfocado en la cons
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
 Motor de análisis, segmentación y transposición facial de alta fidelidad diseñado para flujos de procesamiento en imagen y vídeo de calidad cinematográfica.
+
+```mermaid
+flowchart LR
+    A[Ingesta de Fotograma] --> B[Segmentación BiSeNet]
+    B --> C[Alineación InsightFace]
+    C --> D[Inferencia ONNX Runtime CUDA FP16]
+    D --> E[Restauración CodeFormer / GFPGAN]
+    E --> F[Composición Final de Alta Fidelidad]
+```
 
 - **Pipeline de Inferencia:** Segmentación anatómica a nivel de píxel mediante BiSeNet para generación de máscaras faciales exactas (ojos, labios y contornos). Incorpora restauración generativa con CodeFormer y GFPGAN para reconstrucción nítida en baja resolución.
 - **Aceleración por Hardware:** Motor sobre ONNX Runtime optimizado para núcleos NVIDIA CUDA en media precisión (FP16), reduciendo drásticamente la latencia por fotograma.
@@ -69,6 +87,15 @@ Motor de análisis, segmentación y transposición facial de alta fidelidad dise
 ![Playwright](https://img.shields.io/badge/Playwright_Scraping-2EAD33?style=flat-square)
 
 Pipeline cuantitativo continuo de extracción de datos en tiempo real, modelado estadístico y detección de ineficiencias de cuotas en fútbol internacional.
+
+```mermaid
+flowchart LR
+    T24[T-24h: Scraping & Contexto] --> T12[T-12h: Captura de Cuotas Base]
+    T12 --> T60[T-60m: Alineaciones Sofascore]
+    T60 --> T55[T-55m: Inferencia XGBoost / LightGBM]
+    T55 --> EDGE[Evaluación de Edge Probabilístico]
+    EDGE --> ALERT[Alerta Operativa con Valor Esperado]
+```
 
 - **Orquestación Temporal Automatizada:** Pipeline asíncrono accionado por ventanas temporales estrictas: análisis de noticias y bajas en T-24h, captura de cuotas base en T-12h, extracción reactiva de alineaciones oficiales en T-60min (Sofascore) e inferencia probabilística en T-55min.
 - **Modelado Probabilístico Calibrado:** Algoritmos supervisados (XGBoost y LightGBM) entrenados para estimar la probabilidad real (`P_bot`) sobre mercados de alta liquidez (córneres, tarjetas y goles combinados).
@@ -101,6 +128,17 @@ Plataforma web comercial diseñada para brindar una experiencia interactiva inme
 - **Arquitectura Web Moderna:** Renderizado híbrido SSR/SSG mediante Next.js App Router (React Server Components), arquitectura de diseño atómico y carga perezosa (*lazy loading*) de recursos pesados.
 - **Visualizador 3D en Tiempo Real:** Renderizado interactivo de productos mediante Three.js y React Three Fiber con geometrías y shaders optimizados para mantener 60 FPS estables en dispositivos móviles y de escritorio.
 - **Accesibilidad y SEO Técnico:** Cumplimiento de estándares WCAG AA, navegación completa por teclado, estructura semántica e integración de datos estructurados JSON-LD.
+
+---
+
+## Métricas de Rendimiento & Benchmarks Cuantitativos
+
+| Sistema / Proyecto | Métrica Principal | Benchmark / Resultado Técnico | Entorno de Ejecución |
+| :--- | :--- | :--- | :--- |
+| **EXON-FACE** | Latencia de inferencia por frame | Reducción significativa de tiempo de procesamiento vs FP32 | NVIDIA CUDA / Tensor Cores |
+| **Motor Predictivo ML** | Ventana de ejecución de inferencia | Pipeline de ingesta, cálculo y alerta completado en <90s | Celery Workers + Redis Cache |
+| **quantslot-sdk** | Throughput de simulación estocástica | Millones de tiradas simuladas y analizadas en segundos | Node.js V8 Engine / In-Memory |
+| **TAHUAGYM** | Core Web Vitals (Lighthouse) | 95+ Performance, 100 Accesibilidad, 100 SEO | Next.js Server Components |
 
 ---
 
@@ -203,11 +241,22 @@ Servicio silencioso en segundo plano para sincronización y respaldo automatizad
 
 ---
 
+## Disponibilidad Profesional & Contacto
+
+Disponible para posiciones senior de ingeniería, liderazgo técnico y consultoría de arquitectura de sistemas:
+
+- **Roles de Interés:** Senior Full Stack Engineer · Tech Lead · Especialista en Inferencia de IA & Arquitectura Backend.
+- **Modalidad:** Remoto internacional / Híbrido.
+- **Zona Horaria:** UTC-5 (disponibilidad operativa para alineación con equipos en EE.UU., LATAM y Europa).
+- **Canal Directo:** [LinkedIn](https://www.linkedin.com/in/bmontesdev/) &nbsp;|&nbsp; [bmontesr930620@gmail.com](mailto:bmontesr930620@gmail.com) &nbsp;|&nbsp; [bmontesdev.me](https://bmontesdev.me)
+
+---
+
 ## Métricas de Actividad
 
 <p align="center">
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=bmontes93&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=1f6feb&count_private=true&include_all_commits=true&hide_rank=true&cache_seconds=1800&v=1.5" height="165" alt="Estadísticas de GitHub"/>
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=bmontes93&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&count_private=true&cache_seconds=1800&v=1.5" height="165" alt="Lenguajes Principales"/>
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=bmontes93&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=1f6feb&count_private=true&include_all_commits=true&hide_rank=true&cache_seconds=1800&v=1.6" height="165" alt="Estadísticas de GitHub"/>
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=bmontes93&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&count_private=true&cache_seconds=1800&v=1.6" height="165" alt="Lenguajes Principales"/>
 </p>
 
 ---
