@@ -58,6 +58,31 @@ Soy **Bryan Montes**, desarrollador y arquitecto de software enfocado en la cons
 
 ---
 
+## Patrones de Diseño & Paradigmas de Arquitectura
+
+- **Sistemas Distribuidos & Backend:**
+  - *CQRS & Arquitectura Orientada a Eventos:* Segregación de responsabilidades de comando y consulta para maximizar el throughput de lectura y asegurar consistencia transaccional en escritura.
+  - *Máquinas de Estado Finito (FSM):* Modelado formal de flujos de verificación bancaria, retención de usuarios y transiciones de estado deterministas en servicios asíncronos y bots.
+  - *Inversión de Dependencias:* Desacoplamiento de la infraestructura mediante patrones de Repositorio y Service Layer en FastAPI, Node.js y Next.js.
+- **Inferencia de IA & Procesamiento de Datos:**
+  - *Worker Pools & Pipelines Asíncronos:* Distribución de carga con Celery y Redis para aislar tareas CPU/GPU-intensivas sin bloquear el bucle de eventos principal.
+  - *Model Caching & Quantization:* Optimización de memoria en inferencia mediante modelos ONNX en media precisión (FP16) y precarga de pesos en VRAM para eliminar cold-starts.
+- **Frontend de Alto Rendimiento:**
+  - *React Server Components (RSC):* Minimización del tamaño del bundle JavaScript del cliente y serialización eficiente de datos directamente desde el servidor.
+  - *Atomic Design & Shaders WebGL:* Componentización modular estricta y optimización de shaders GLSL para renderizado 3D a 60 FPS estables.
+
+---
+
+## Seguridad, Hardening & Criptografía
+
+- **Aleatoriedad Criptográfica Certificable (CSPRNG):** Generación de entropía estadística no predecible conforme a normativas internacionales de certificación de software para iGaming (GLI / iTech Labs).
+- **Validación Estricta en Fronteras:** Validación en tiempo de compilación y runtime de esquemas de datos mediante Pydantic (Python) y Zod (TypeScript), previniendo inyecciones y datos malformados antes de ingresar a la capa de dominio.
+- **Defensa en Profundidad & Control de Acceso:**
+  - Hashing criptográfico robusto (Argon2 / bcrypt) para credenciales y autenticación basada en tokens JWT con expiración corta y rotación.
+  - Limitación de tasa (*Rate Limiting*) defensiva en memoria sobre Redis para mitigar ataques de fuerza bruta y denegación de servicio (DDoS).
+
+---
+
 ## Investigación & Exploración Técnica Activa (I+D)
 
 Líneas de investigación tecnológica y desarrollo experimental continuo:
@@ -154,6 +179,18 @@ Plataforma web comercial diseñada para brindar una experiencia interactiva inme
 | **Motor Predictivo ML** | Ventana de ejecución de inferencia | Pipeline de ingesta, cálculo y alerta completado en <90s | Celery Workers + Redis Cache |
 | **quantslot-sdk** | Throughput de simulación estocástica | Millones de tiradas simuladas y analizadas en segundos | Node.js V8 Engine / In-Memory |
 | **TAHUAGYM** | Core Web Vitals (Lighthouse) | 95+ Performance, 100 Accesibilidad, 100 SEO | Next.js Server Components |
+
+---
+
+## Trayectoria de Impacto & Hitos Técnicos
+
+| Dominio de Ingeniería | Hito Técnico / Impacto de Producción | Paradigma Tecnológico |
+| :--- | :--- | :--- |
+| **Simulación Estocástica** | Motor de certificación para iGaming capaz de procesar >1,000,000 giros/segundo sin desviación estadística | Node.js · CSPRNG · Monte Carlo |
+| **Visión Artificial en Tiempo Real** | Pipeline cinematográfico de transposición facial con latencia minimizada en GPUs con Tensor Cores | Python · ONNX Runtime · CUDA FP16 |
+| **Modelado Predictivo Deportivo** | Orquestación distribuida de extracción, inferencia y evaluación de cuotas en <90s antes del inicio de eventos | XGBoost · Celery · Redis · Playwright |
+| **Plataformas Web Inmersivas** | Experiencia comercial con renderizado 3D interactivo en tiempo real alcanzando puntuaciones Lighthouse 95+ | Next.js · Three.js · React Three Fiber |
+| **Automatización & Ecosistemas SaaS** | Arquitectura modular de bots y gestión de membresías con verificación FSM y pasarelas de pago | FastAPI · PostgreSQL · aiogram 3 · Docker |
 
 ---
 
@@ -273,8 +310,8 @@ Disponible para posiciones senior de ingeniería, liderazgo técnico y consultor
 ## Métricas de Actividad
 
 <p align="center">
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=bmontes93&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=1f6feb&count_private=true&include_all_commits=true&hide_rank=true&cache_seconds=1800&v=1.7" height="165" alt="Estadísticas de GitHub"/>
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=bmontes93&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&count_private=true&cache_seconds=1800&v=1.7" height="165" alt="Lenguajes Principales"/>
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=bmontes93&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=1f6feb&count_private=true&include_all_commits=true&hide_rank=true&cache_seconds=1800&v=1.8" height="165" alt="Estadísticas de GitHub"/>
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=bmontes93&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&count_private=true&cache_seconds=1800&v=1.8" height="165" alt="Lenguajes Principales"/>
 </p>
 
 ---
