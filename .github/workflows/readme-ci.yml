@@ -1,0 +1,29 @@
+name: Profile Quality CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Markdown & Integrity Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate README Integrity
+        run: |
+          echo "Validating README.md structure and required sections..."
+          test -f README.md || { echo "README.md not found"; exit 1; }
+          grep -q "Bryan Montes" README.md || { echo "Author name missing"; exit 1; }
+          grep -q "EXON-FACE" README.md || { echo "Showcase project missing"; exit 1; }
+          echo "Integrity checks passed successfully."

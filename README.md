@@ -21,6 +21,9 @@
   <a href="https://github.com/bmontes93">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
   </a>
+  <a href="https://github.com/bmontes93/bmontes93/actions/workflows/readme-ci.yml">
+    <img src="https://github.com/bmontes93/bmontes93/actions/workflows/readme-ci.yml/badge.svg" alt="Quality CI"/>
+  </a>
 </p>
 
 ---
@@ -55,6 +58,16 @@ Soy **Bryan Montes**, desarrollador y arquitecto de software enfocado en la cons
 
 ---
 
+## Investigación & Exploración Técnica Activa (I+D)
+
+Líneas de investigación tecnológica y desarrollo experimental continuo:
+
+- **Sistemas de Agentes Autónomos & LLMs Locales:** Cuantización eficiente de modelos de lenguaje (GGUF, AWQ), inferencia de baja latencia con vLLM y orquestación de agentes con memorias vectoriales.
+- **Aceleración con Rust & WebAssembly:** Compilación de núcleos matemáticos y de simulación a WASM para ejecutar procesamiento intensivo a velocidad nativa en navegadores.
+- **Patrones Event-Driven Distribuidos:** Implementación de Event Sourcing y CQRS para arquitecturas distribuidas de alta concurrencia y consistencia eventual.
+
+---
+
 ## Proyectos Destacados
 
 ### [EXON-FACE](https://github.com/bmontes93/EXON-FACE) — Sistema de Visión Artificial y Procesamiento Facial
@@ -77,6 +90,7 @@ flowchart LR
 - **Pipeline de Inferencia:** Segmentación anatómica a nivel de píxel mediante BiSeNet para generación de máscaras faciales exactas (ojos, labios y contornos). Incorpora restauración generativa con CodeFormer y GFPGAN para reconstrucción nítida en baja resolución.
 - **Aceleración por Hardware:** Motor sobre ONNX Runtime optimizado para núcleos NVIDIA CUDA en media precisión (FP16), reduciendo drásticamente la latencia por fotograma.
 - **Entorno de Producción:** Empaquetado completo en Docker, scripts de inicialización automatizados, CLI para procesamiento en lote e interfaz gráfica interactiva en Gradio.
+- **Accesos Técnicos:** [Código Fuente](https://github.com/bmontes93/EXON-FACE) &nbsp;·&nbsp; [Documentación del Repositorio](https://github.com/bmontes93/EXON-FACE#readme)
 
 ---
 
@@ -113,7 +127,8 @@ Motor matemático de simulación probabilística y certificación de slots digit
 
 - **Simulador Monte Carlo Masivo:** Capacidad para ejecutar millones de giros en pocos segundos, validando empíricamente curvas de volatilidad, distribución de frecuencias (*hit frequency*) y RTP teórico.
 - **Mecánicas Dinámicas Complejas:** Soporte para estructuras dinámicas Cluster-Pay (5x5), sistemas de cascadas infinitas, multiplicadores acumulativos y rondas de bonificación multinivel.
-- **Aleatoriedad Certificable:** Generación de números aleatorios criptográficamente segura (CSPRNG) para garantizar uniformidad estadística y total ausencia de patrones predictibles.
+- **Aleatoriedad Certificable:** Generador de números aleatorios criptográficamente segura (CSPRNG) para garantizar uniformidad estadística y total ausencia de patrones predictibles.
+- **Accesos Técnicos:** [Código Fuente](https://github.com/bmontes93/quantslot-sdk) &nbsp;·&nbsp; [Documentación del SDK](https://github.com/bmontes93/quantslot-sdk#readme)
 
 ---
 
@@ -173,6 +188,7 @@ Plataforma integral para reservas de eventos y conexión de proveedores locales:
 Plataforma de análisis matemático simbólico:
 * Backend asíncrono con FastAPI y SymPy para simplificación algebraica, derivadas e integrales analíticas en milisegundos.
 * Editor visual interactivo WYSIWYG mediante MathLive y graficación matemática en 2D reactiva con Function-Plot.
+* **Accesos Técnicos:** [Código Fuente](https://github.com/bmontes93/CALC101NG) &nbsp;·&nbsp; [Documentación de la API](https://github.com/bmontes93/CALC101NG#readme)
 
 ---
 
@@ -182,6 +198,7 @@ Plataforma de análisis matemático simbólico:
 Infraestructura de tienda virtual con separación completa entre capa de presentación y servicios de backend:
 * Microservicios contenerizados de despliegue independiente orquestados con Docker Compose.
 * Sistema de autenticación seguro basado en tokens JWT y panel administrativo integral para inventario y órdenes.
+* **Accesos Técnicos:** [Código Fuente](https://github.com/bmontes93/GEST-E-COMERCE)
 
 ---
 
@@ -191,6 +208,7 @@ Infraestructura de tienda virtual con separación completa entre capa de present
 Servicio silencioso en segundo plano para sincronización y respaldo automatizado de unidades de almacenamiento:
 * Desencadenamiento reactivo mediante eventos de sistema (`DriverFrameworks`), eliminando el consumo continuo de CPU por polling.
 * Copia masiva multihilo a 32 subprocesos concurrentes con permisos elevados del sistema operativo.
+* **Accesos Técnicos:** [Código Fuente](https://github.com/bmontes93/Hide-Clone-USB)
 
 </details>
 
@@ -255,8 +273,8 @@ Disponible para posiciones senior de ingeniería, liderazgo técnico y consultor
 ## Métricas de Actividad
 
 <p align="center">
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=bmontes93&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=1f6feb&count_private=true&include_all_commits=true&hide_rank=true&cache_seconds=1800&v=1.6" height="165" alt="Estadísticas de GitHub"/>
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=bmontes93&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&count_private=true&cache_seconds=1800&v=1.6" height="165" alt="Lenguajes Principales"/>
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=bmontes93&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=1f6feb&count_private=true&include_all_commits=true&hide_rank=true&cache_seconds=1800&v=1.7" height="165" alt="Estadísticas de GitHub"/>
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=bmontes93&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&count_private=true&cache_seconds=1800&v=1.7" height="165" alt="Lenguajes Principales"/>
 </p>
 
 ---
