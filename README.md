@@ -1,16 +1,16 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/bmontes93/bmontes93/main/banner.png" width="100%" alt="Bryan Montes — Senior Full Stack Engineer" />
+  <img src="https://raw.githubusercontent.com/bmontes93/bmontes93/main/banner.png" width="100%" alt="Bryan Montes — Senior Full Stack & Systems Engineer" />
 </p>
 
 <h1 align="center">Bryan Montes · Thekerdruid</h1>
 
 <p align="center">
-  <strong>Senior Full Stack Engineer &nbsp;|&nbsp; AI & Computer Vision Specialist &nbsp;|&nbsp; E-commerce Architect</strong>
+  <strong>Senior Full Stack & Systems Engineer &nbsp;|&nbsp; Especialista en IA & Visión Artificial &nbsp;|&nbsp; Arquitecturas de Alto Rendimiento</strong>
 </p>
 
 <p align="center">
   <a href="https://bmontesdev.me" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"/>
+    <img src="https://img.shields.io/badge/Portafolio-000000?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portafolio"/>
   </a>
   <a href="https://www.linkedin.com/in/bmontesdev/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
@@ -21,61 +21,60 @@
   <a href="https://github.com/bmontes93">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
   </a>
-  <img src="https://komarev.com/ghpvc/?username=bmontes93&style=for-the-badge&color=0e75b6" alt="Profile views"/>
+  <img src="https://komarev.com/ghpvc/?username=bmontes93&style=for-the-badge&color=0e75b6" alt="Visitas al perfil"/>
 </p>
 
 ---
 
-##  About Me
+## 👨‍💻 Perfil Profesional
 
-I design and build **complex, production-ready systems** — from high-throughput e-commerce platforms to state-of-the-art AI pipelines. My work is defined by three core principles:
+Diseño y desarrollo **sistemas de software robustos, escalables y preparados para producción** — desde pipelines avanzados de inferencia con IA y visión por computador hasta arquitecturas distribuidas de alta concurrencia. Mi enfoque técnico se rige por tres principios:
 
-- 🏗 **Architectural Clarity** — Clean separation of concerns with scalable, maintainable design patterns.
-- ⚡ **Performance First** — Sub-second loads, optimized bundles, SSR/SSG strategies, and FP16 AI inference.
-- 🎨 **Premium UX** — Cinematic animations (GSAP, Framer Motion), 3D experiences (Three.js/React Three Fiber), and pixel-perfect interfaces.
-
----
-
-##  Highlighted Projects
-
-###  [EXON-FACE](https://github.com/bmontes93/EXON-FACE) — High-Performance Computer Vision System
-> **Python · ONNX Runtime · OpenCV · InsightFace · BiSeNet · Gradio · Docker**
-
-A state-of-the-art face-swapping engine engineered for **cinema-quality output**, built on top of the InsightFace model suite.
-
-- 🧠 **Precision AI Pipeline** — BiSeNet segmentation for pixel-perfect facial masking (eyes, mouth, skin). CodeFormer + GFPGAN post-processing enhancers for low-resolution face restoration.
-- ⚙️ **Hardware-Agnostic Acceleration** — ONNX Runtime with pre-tuned NVIDIA CUDA support and FP16 inference profiles (Cinema / Balanced / Fast).
-- 🐳 **Production-Ready** — Dockerized environment, one-click `.bat` installer, CLI + Gradio GUI for both casual and automated usage.
+- 🏗 **Claridad Arquitectónica** — Separación estricta de responsabilidades, modularidad y diseño mantenible basado en microservicios y sistemas desacoplados.
+- ⚡ **Rendimiento Extremo** — Optimización de recursos, inferencia acelerada por hardware (FP16 / CUDA), procesamiento asíncrono y tiempos de respuesta sub-segundo.
+- 🧪 **Calidad y Resiliencia** — Tipado estático estricto, pruebas automatizadas, monitoreo y despliegues reproducibles mediante entornos contenerizados.
 
 ---
 
-###  [botpredictor](https://github.com/bmontes93/botpredictor) — Machine Learning Soccer Prediction Pipeline
-> **Python · Playwright · Celery · Redis · PostgreSQL · pandas · NumPy · XGBoost · LightGBM**
+## 🚀 Proyectos Destacados (Showcase)
 
-Pipeline automatizado de extracción de datos, inferencia probabilística con Machine Learning y alertas de apuestas de valor (*Value Betting*) para fútbol en tiempo real.
+### 👁️ [EXON-FACE](https://github.com/bmontes93/EXON-FACE) — Sistema de Visión Artificial de Alto Rendimiento
+> **Python · ONNX Runtime · NVIDIA CUDA (FP16) · OpenCV · InsightFace · BiSeNet · Docker**
 
-- ⚙️ **Arquitectura por Fases** — Ejecución orquestada en base al inicio del evento: T-24 análisis de sentimiento sobre bajas; T-12 captura de cuotas base en bookmakers; T-60 trigger asíncrono para detección de alineaciones oficiales en Sofascore; y T-55 ejecución del modelo de inferencia.
-- 🧠 **Modelado ML Avanzado** — Algoritmos predictivos basados en XGBoost y LightGBM entrenados para determinar probabilidades reales ($P_{bot}$) de mercados de córneres, tarjetas y BTTS + Over 2.5.
-- 📊 **Cálculo de Valor Implícito** — Aplica una formulación de margen de seguridad (`(1 / P_bot) * (1 + alpha) < Cuota_Bookie` con $\alpha = 0.05$) para recomendar alertas únicamente en mercados con valor real frente a las cuotas del mercado.
+Motor de análisis y transposición facial de alta fidelidad diseñado para procesar vídeo e imagen con calidad cinematográfica.
 
----
-
-###  [ALL-DAY](https://github.com/bmontes93/ALL-DAY) — Plataforma SaaS de Gestión de Eventos
-> **Next.js 15 · React 19 · TypeScript · TailwindCSS v4 · PostgreSQL · Prisma ORM · NextAuth.js · Pusher · Resend · Culqi**
-
-Plataforma integral de gestión de eventos y conexión con proveedores locales en Huaraz (SaaS). Ofrece pagos seguros, notificaciones y gamificación.
-
-- 🛡️ **Ecosistema Seguro** — Verificación de proveedores (DNI + reconocimiento facial) y sistema de mensajería interna con privacidad anti-stalking.
-- 📅 **Gestión de Reservas** — Flujo interactivo con control de disponibilidad en tiempo real, validaciones con Zod y pagos divididos en dos partes (50% de depósito inicial) integrados con Culqi.
-- 🔔 **Notificaciones Multicanal** — Alertas Push nativas vía Service Workers, avisos in-app en tiempo real con Sonner y correos electrónicos transaccionales profesionales vía Resend.
-- 🏆 **Gamificación y Fidelización** — Progreso por niveles de usuario (Bronce, Plata, Oro, VIP) y acumulación de puntos por eventos completados.
+- 🧠 **Pipeline de Inferencia Precisa** — Segmentación facial a nivel de píxel mediante BiSeNet para oclusión y mascarillas anatómicas (ojos, labios, piel). Incorpora restauradores faciales basados en redes generativas (CodeFormer y GFPGAN) para reconstrucción en baja resolución.
+- ⚙️ **Aceleración Hardware-Agnostic** — Integración con ONNX Runtime optimizada para núcleos NVIDIA CUDA bajo perfiles de inferencia en precisión media (FP16), reduciendo drásticamente la latencia por fotograma.
+- 🐳 **Entorno de Producción** — Empaquetado completo en Docker, scripts de inicialización automatizados, interfaz gráfica interactiva con Gradio y modo CLI para ejecución en lote.
 
 ---
 
-###  [bots](https://github.com/bmontes93/bots) — Unified Telegram Bots Ecosystem (SaaS)
-> **Python · aiogram 3.0 · FastAPI · PostgreSQL · SQLAlchemy 2.0 · Redis · APScheduler · Docker**
+### ⚽ Engine Predictivo ML & Value-Betting Deportivo `[Proprietary / Repositorio Privado]`
+> **Python · XGBoost · LightGBM · Celery · Redis · PostgreSQL · Playwright · Pandas**
 
-Ecosistema modular SaaS de automatización, verificación de pagos y retención de usuarios para canales privados, conformado por tres bots de Telegram paralelos integrados bajo un backend unificado.
+Pipeline analítico de ejecución continua orientado a la extracción masiva de datos en tiempo real, modelado estadístico probabilístico y detección de valor de mercado en fútbol internacional.
+
+- ⚙️ **Orquestación Temporal Automatizada** — Ejecución distribuida y coordinada por fases antes del inicio de cada evento: preanálisis de contexto en T-24h, captura de cuotas base en T-12h, extracción asíncrona de alineaciones oficiales en T-60min (Sofascore) e inferencia del modelo en T-55min.
+- 🧠 **Modelado Probabilístico Avanzado** — Modelos supervisados basados en XGBoost y LightGBM entrenados para determinar la probabilidad real ($P_{bot}$) en mercados de alta liquidez (córneres, amonestaciones y goles combinados).
+- 📊 **Algoritmo de Valor Implícito** — Sistema de filtrado con margen de seguridad probabilístico (`(1 / P_bot) * (1 + alpha) < Cuota_Bookie` con $\alpha = 0.05$) para disparar alertas exclusivamente ante ineficiencias de cuotas verificables.
+
+---
+
+### 🎲 [quantslot-sdk](https://github.com/bmontes93/quantslot-sdk) — Motor Matemático y Simulación Estocástica para iGaming
+> **Node.js · TypeScript · Simulaciones Monte Carlo · CSPRNG Criptográfico**
+
+Motor matemático de alto rendimiento para validación estadística de juegos de azar digitales conforme a los estándares técnicos exigidos por laboratorios de certificación internacional (GLI, iTech Labs).
+
+- 🎲 **Simulador Monte Carlo Masivo** — Capacidad de ejecución de millones de giros en pocos segundos para validar empíricamente el retorno teórico al jugador (RTP), volatilidad y frecuencia de aciertos (*hit frequency*).
+- ⚙️ **Mecánicas de Juego Complejas** — Lógica para matrices dinámicas Cluster-Pay (5x5), cascadas continuas, multiplicadores acumulativos y rondas de bonificación de múltiples niveles.
+- 🔒 **Aleatoriedad Criptográficamente Segura** — Generación de números aleatorios basada en CSPRNG para certificar independencia estadística y ausencia de patrones predictibles.
+
+---
+
+### 🏋️ [TAHUAGYM](https://github.com/bmontes93/TAHUAGYM) — Plataforma Web de Alto Rendimiento con Renderizado 3D
+> **Next.js · TypeScript · Three.js · React Three Fiber · TailwindCSS · Framer Motion · GSAP**
+
+Plataforma web comercial orientada a una experiencia visual cinematográfica y ultra-fluida, alcanzando un índice de rendimiento de **Lighthouse 95+**.
 
 - 🛡️ **Bot de Verificación** — Procesa comprobantes de depósitos/transferencias mediante FSM, delega aprobaciones a grupos de administración con teclados inline y genera enlaces de invitación exclusivos con validación automatizada.
 - 🔄 **Bot de Retención** — Agente en segundo plano (APScheduler) que alertara sobre la expiración inminente de suscripciones (T-3 días y T-1 día), gestiona la expulsión de canales de usuarios inactivos y ejecuta flujos de recuperación automáticos.
@@ -84,137 +83,110 @@ Ecosistema modular SaaS de automatización, verificación de pagos y retención 
 
 ---
 
-###  [Sheinclon](https://github.com/bmontes93/Sheinclon) — Full-Stack E-commerce Platform
-> **TypeScript · Node.js · TypeORM · SQLite · React · Vite**
+<details>
+<summary><b>📂 Ver más proyectos de arquitectura y software especializado</b></summary>
 
-A high-fidelity Shein clone built for **performance and scalability**. Migrated from MongoDB to a relational SQL architecture with TypeORM for a more robust data model. Features include:
+<br/>
 
-- 🎬 **Cinematics UI** — Blur-up image loading, animated product cards (hover zoom + alternate angle reveal), and editorial-style layouts.
-- 🛒 **Full E-commerce Engine** — Dynamic catalog with real-time filtering, persistent shopping cart, wishlist, variant management (size/color), discount coupon system, and a user review module.
-- 🔒 **TypeScript Full-Stack** — Strict static typing across frontend and backend for maximum safety and maintainability.
+#### 🤖 Ecosistema SaaS de Automatización & Pagos para Telegram `[Enterprise / Comercial]`
+> **Python · aiogram 3 · FastAPI · PostgreSQL · SQLAlchemy 2.0 · Redis · APScheduler · Docker**
 
----
-
-###  [TAHUAGYM](https://github.com/bmontes93/TAHUAGYM) — Premium Fitness Management Platform
-> **Next.js 16 · TypeScript · TailwindCSS · Three.js · React Three Fiber · Framer Motion · GSAP**
-
-A visually stunning web platform for a premium training center in Huaraz, Perú. Achieved **Lighthouse 95+ Performance Score**.
-
-- 🌐 **Advanced Architecture** — Hybrid SSR/SSG rendering with Next.js App Router (Server Components by default), Atomic Design system, and dynamic lazy loading.
-- 🎮 **3D Product Visualizer** — Interactive Three.js/React Three Fiber showcase for merchandise (Tahua Labs).
-- 🔍 **SEO & Accessibility** — Full Open Graph, Schema.org JSON-LD structured data, WCAG AA compliance, keyboard navigation, and automated sitemap generation.
+Arquitectura modular para la gestión, verificación de transferencias y control de accesos a comunidades privadas mediante tres bots paralelos:
+* **Verificación:** Procesamiento de comprobantes de pago mediante máquinas de estado finito (FSM), validación por parte del equipo administrativo y generación de enlaces temporales de un solo uso.
+* **Retención:** Monitoreo programado en segundo plano con APScheduler para alertas preventivas de renovación y revocación automática de membresías inactivas.
+* **Difusión:** Módulo de comunicaciones segmentadas para campañas automatizadas de reactivación.
 
 ---
 
-###  [CALC101NG](https://github.com/bmontes93/CALC101NG) — Plataforma Matemática Simbólica
-> **React 19 · TypeScript · Vite · MathLive · Function-Plot · Python · FastAPI · SymPy · Docker**
+#### 📅 [ALL-DAY](https://github.com/bmontes93/ALL-DAY) — Plataforma SaaS para Gestión de Eventos y Proveedores
+> **Next.js 15 · React 19 · TypeScript · PostgreSQL · Prisma ORM · Culqi · Resend · Pusher**
 
-Plataforma matemática inteligente de nueva generación. Resuelve derivadas, integrales, ecuaciones y sistemas con pasos detallados y gráficas interactivas.
-
-- 🧮 **Editor WYSIWYG Nativo** — Teclado matemático virtual con MathLive para escribir fórmulas (integrales, fracciones, matrices) de forma natural y matemática.
-- 📈 **Gráficas Dinámicas** — Visualización automática 2D interactiva de ecuaciones, inecuaciones y regiones sombreadas mediante Function-Plot.
-- ⚡ **Motor Asíncrono de Alta Velocidad** — API construida sobre FastAPI y SymPy para el cálculo y simplificación matemática simbólica en milisegundos.
-- 🎨 **Diseño Premium Glassmorphism** — Interfaz inmersiva con modo oscuro nativo y micro-interacciones interactivas fluidas usando Framer Motion.
+Plataforma integral de reservas de servicios:
+* **Seguridad:** Flujo de validación de identidad para prestadores de servicios y mensajería interna protegida.
+* **Transaccionalidad:** Sistema de reservas con pagos fraccionados (anticipo del 50%) integrado con la pasarela de pagos Culqi.
+* **Tiempo Real:** Notificaciones Push mediante Service Workers y alertas in-app mediante Pusher.
 
 ---
 
-###  [GEST E-Commerce](https://github.com/bmontes93/GEST-E-COMERCE) — Microservices E-commerce Solution
-> **TypeScript · React · Vite · Python · FastAPI · Docker · Docker Compose · JWT**
+#### 🧮 [CALC101NG](https://github.com/bmontes93/CALC101NG) — Motor de Cálculo Simbólico y Gráficas Dinámicas
+> **React · TypeScript · Vite · MathLive · Function-Plot · Python · FastAPI · SymPy · Docker**
 
-A robust, decoupled commerce infrastructure designed with **enterprise-grade separation of concerns**.
-
-- 🏗 **Microservices Architecture** — Fully containerized with Docker Compose; React/Vite frontend calls a Python FastAPI backend, each independently deployable.
-- 🔐 **Secure Auth System** — JWT-based authentication with role management and a full administrative dashboard.
-- 🚀 **DevOps Ready** — `render.yaml` for zero-config cloud deployment, `docker-compose up --build` for identical dev/prod environments.
+Plataforma de resolución matemática paso a paso:
+* Backend asíncrono con FastAPI y SymPy para simplificación algebraica, derivadas e integrales analíticas en milisegundos.
+* Interfaz con teclado matemático virtual mediante MathLive y graficación reactiva en 2D con Function-Plot.
 
 ---
 
-###  [quantslot-sdk](https://github.com/bmontes93/quantslot-sdk) — QuantSlot Math Engine & RTP API
-> **Node.js · Express · Monte Carlo Simulations · Cryptographic RNG (CSPRNG)**
+#### 🛒 [GEST E-Commerce](https://github.com/bmontes93/GEST-E-COMERCE) — Arquitectura E-Commerce Desacoplada
+> **TypeScript · React · Vite · Python · FastAPI · Docker Compose · JWT**
 
-Motor matemático y backend de simulación estocástica de alto rendimiento para la industria de iGaming (tragamonedas / slots) diseñado bajo estándares de certificación internacional.
-
-- 🎲 **Simulador Monte Carlo** — Capacidad para ejecutar millones de giros en segundos para validar métricas clave de juego, frecuencia de aciertos (hit frequency) y porcentaje de RTP.
-- ⚙️ **Mecánicas Complejas** — Soporte nativo para Cluster-Pay (cuadrículas 5x5), cascadas infinitas, multiplicadores y bonificaciones multinivel.
-- 🔒 **Seguridad CSPRNG** — Generación de números aleatorios criptográficamente seguros para garantizar la aleatoriedad matemática exigida por certificadoras (GLI, iTech Labs).
+Infraestructura de tienda virtual desacoplada con separación completa entre capa de presentación y servicios de backend:
+* Microservicios contenerizados de despliegue independiente mediante Docker Compose.
+* Sistema de autenticación con tokens JWT y panel administrativo de control de inventario y pedidos.
 
 ---
 
-###  [Hide-Clone-USB](https://github.com/bmontes93/Hide-Clone-USB) — USB Auto-Sync Service
-> **PowerShell · Robocopy · Windows Task Scheduler · Event-Driven Architecture**
+#### 🔌 [Hide-Clone-USB](https://github.com/bmontes93/Hide-Clone-USB) — Servicio de Sincronización Orientado a Eventos
+> **PowerShell · Robocopy (32 Threads) · Windows Task Scheduler**
 
-Servicio silencioso y de alto rendimiento para la sincronización y respaldo automatizado de dispositivos de almacenamiento USB en Windows.
+Servicio en segundo plano para respaldo automatizado de dispositivos de almacenamiento externo:
+* Desencadenamiento reactivo a través de eventos de sistema (`DriverFrameworks`), sin consumo continuo de CPU por polling.
+* Copia masiva multihilo a 32 subprocesos concurrentes con permisos elevados en el contexto del sistema operativo.
 
-- ⚡ **Arquitectura Orientada a Eventos** — Activación instantánea mediante triggers de eventos del sistema (DriverFrameworks Event ID 2003/2101), eliminando el consumo de CPU por polling en reposo.
-- 🚀 **Copia Multihilo** — Transferencias de archivos masivas ultra-rápidas mediante Robocopy optimizado a 32 hilos (`/MT:32`) y modo de respaldo (`/B`) para archivos protegidos.
-- 👤 **Ejecución Invisible** — Corre como servicio en el contexto de `NT AUTHORITY\SYSTEM` de manera totalmente oculta y sin interfaces de consola molestas para el usuario.
-
----
-
-###  [CHAMBEAFACIL](https://github.com/bmontes93/CHAMBEAFACIL) — Job Market Platform
-> **JavaScript · Full-Stack**
-
-A scalable digital marketplace connecting employers and workers, focused on the Peruvian market.
+</details>
 
 ---
 
-###  [Cientific-Calc](https://github.com/bmontes93/Cientific-Calc) — Scientific Calculator
-> **JavaScript**
+## 🛠️ Stack Tecnológico
 
-Browser-based scientific calculator providing advanced mathematical operations within a polished, modern, and mobile-responsive web interface.
-
----
-
-##  Technology Stack
-
-### 🧠 Artificial Intelligence & Computer Vision
+### 🧠 Inteligencia Artificial & Visión por Computador
 <p align="left">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/ONNX_Runtime-007EC6?style=for-the-badge&logo=onnx&logoColor=white"/>
-  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/ONNX_Runtime-007EC6?style=for-the-badge&logo=onnx&logoColor=white" alt="ONNX Runtime"/>
+  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV"/>
+  <img src="https://img.shields.io/badge/NVIDIA_CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="CUDA"/>
+  <img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn"/>
 </p>
 
-### 🌐 Frontend Development
+### 🌐 Frontend & Experiencias Web
 <p align="left">
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"/>
-  <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/>
+  <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js"/>
+  <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS"/>
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
 </p>
 
-### ⚙️ Backend, Databases & Cache
+### ⚙️ Backend, Bases de Datos & Caché
 <p align="left">
-  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white"/>
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
-  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"/>
-  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis"/>
+  <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma"/>
+  <img src="https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white" alt="SQLAlchemy"/>
+  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite"/>
 </p>
 
-### 🛠️ DevOps, Task Queues & Utilities
+### 🧪 Testing, CI/CD & DevOps
 <p align="left">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white"/>
-  <img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions"/>
+  <img src="https://img.shields.io/badge/PyTest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white" alt="PyTest"/>
+  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" alt="Playwright"/>
+  <img src="https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white" alt="Celery"/>
+  <img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white" alt="PowerShell"/>
 </p>
 
 ---
 
-##  GitHub Metrics
+## 📊 Métricas de GitHub
 
 <p align="center">
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=bmontes93&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=1f6feb&count_private=true&include_all_commits=true&hide_rank=true&cache_seconds=1800&v=1.1" height="165" alt="GitHub Stats"/>
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=bmontes93&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&count_private=true&cache_seconds=1800&v=1.1" height="165" alt="Top Languages"/>
-</p>
-
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=bmontes93&theme=tokyonight&hide_border=true&background=0d1117&stroke=58a6ff&ring=1f6feb&fire=ff9300&currStreakLabel=58a6ff&count_private=true&v=1.1" alt="GitHub Streak"/>
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=bmontes93&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=1f6feb&count_private=true&include_all_commits=true&hide_rank=true&cache_seconds=1800&v=1.2" height="165" alt="Estadísticas de GitHub"/>
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=bmontes93&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&count_private=true&cache_seconds=1800&v=1.2" height="165" alt="Lenguajes Principales"/>
 </p>
 
 ---
