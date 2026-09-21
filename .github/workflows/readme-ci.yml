@@ -5,6 +5,8 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  schedule:
+    - cron: '0 4 * * *' # Validación automatizada diaria a las 04:00 UTC
   workflow_dispatch:
 
 jobs:
@@ -26,4 +28,5 @@ jobs:
           test -f README.md || { echo "README.md not found"; exit 1; }
           grep -q "Bryan Montes" README.md || { echo "Author name missing"; exit 1; }
           grep -q "EXON-FACE" README.md || { echo "Showcase project missing"; exit 1; }
-          echo "Integrity checks passed successfully."
+          grep -q "Blueprint de Arquitectura" README.md || { echo "Blueprint section missing"; exit 1; }
+          echo "Integrity and syntax checks passed successfully."

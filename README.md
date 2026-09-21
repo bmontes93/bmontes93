@@ -24,6 +24,7 @@
   <a href="https://github.com/bmontes93/bmontes93/actions/workflows/readme-ci.yml">
     <img src="https://github.com/bmontes93/bmontes93/actions/workflows/readme-ci.yml/badge.svg" alt="Quality CI"/>
   </a>
+  <img src="https://img.shields.io/badge/Commits-GPG_Verified-00c853?style=for-the-badge&logo=gnupg&logoColor=white" alt="GPG Verified"/>
 </p>
 
 ---
@@ -80,6 +81,7 @@ Soy **Bryan Montes**, desarrollador y arquitecto de software enfocado en la cons
 - **Defensa en Profundidad & Control de Acceso:**
   - Hashing criptográfico robusto (Argon2 / bcrypt) para credenciales y autenticación basada en tokens JWT con expiración corta y rotación.
   - Limitación de tasa (*Rate Limiting*) defensiva en memoria sobre Redis para mitigar ataques de fuerza bruta y denegación de servicio (DDoS).
+- **Firma Criptográfica & Cadena de Suministro:** Firma obligatoria de commits y releases mediante claves criptográficas GPG/SSH, impidiendo suplantaciones y asegurando la procedencia inmutable del código.
 
 ---
 
@@ -90,6 +92,39 @@ Líneas de investigación tecnológica y desarrollo experimental continuo:
 - **Sistemas de Agentes Autónomos & LLMs Locales:** Cuantización eficiente de modelos de lenguaje (GGUF, AWQ), inferencia de baja latencia con vLLM y orquestación de agentes con memorias vectoriales.
 - **Aceleración con Rust & WebAssembly:** Compilación de núcleos matemáticos y de simulación a WASM para ejecutar procesamiento intensivo a velocidad nativa en navegadores.
 - **Patrones Event-Driven Distribuidos:** Implementación de Event Sourcing y CQRS para arquitecturas distribuidas de alta concurrencia y consistencia eventual.
+
+---
+
+## Blueprint de Arquitectura de Referencia para Producción
+
+Diseño de arquitectura distribuida estándar implementado para soluciones que requieren alta disponibilidad, tolerancia a fallos y procesamiento concurrente:
+
+```mermaid
+flowchart TD
+    subgraph Edge["Capa Perimetral & Balanceo"]
+        DNS[DNS / Cloudflare WAF] --> CDN[Edge Cache & SSL Termination]
+        CDN --> LB[Reverse Proxy / Ingress Controller]
+    end
+
+    subgraph Services["Capa de Servicios & Cómputo"]
+        LB --> API[API Gateway / FastAPI / Node.js]
+        API --> AUTH[Control de Acceso & JWT]
+        API --> QUEUE[(Redis Message Broker / Event Bus)]
+        QUEUE --> WORKERS[Worker Pools / Celery Asíncrono]
+        WORKERS --> AI[Inferencia IA: ONNX Runtime CUDA FP16]
+    end
+
+    subgraph DataLayer["Persistencia & Estado"]
+        API --> CACHE[(Redis In-Memory L1/L2 Cache)]
+        API --> DB[(PostgreSQL / Transacciones ACID)]
+        WORKERS --> DB
+    end
+
+    subgraph Telemetry["Observabilidad & Telemetría"]
+        API -.-> OBS[Métricas Prometheus & Grafana]
+        WORKERS -.-> LOGS[Structured Tracing & Logs]
+    end
+```
 
 ---
 
@@ -296,6 +331,17 @@ Servicio silencioso en segundo plano para sincronización y respaldo automatizad
 
 ---
 
+## Entorno de Desarrollo & Estación de Trabajo
+
+| Componente | Especificación Técnica | Propósito de Ingeniería |
+| :--- | :--- | :--- |
+| **Cómputo & Aceleración Local** | GPU NVIDIA con Tensor Cores (CUDA / FP16 / INT8) | Prototipado rápido de modelos, benchmarking y cuantización de inferencia |
+| **Sistema Operativo & Runtimes** | Linux (Debian / WSL2) & Docker Engine Nativo | Aislamiento estricto de dependencias y paridad dev/prod idéntica |
+| **Terminal & Tooling CLI** | PowerShell / Zsh · ripgrep · fd · fzf | Navegación de código de alta velocidad y automatización local |
+| **IDEs & Editores** | Neovim / VS Code Headless | Entorno de desarrollo desacoplado, ligero y optimizado para tipado estricto |
+
+---
+
 ## Disponibilidad Profesional & Contacto
 
 Disponible para posiciones senior de ingeniería, liderazgo técnico y consultoría de arquitectura de sistemas:
@@ -310,8 +356,8 @@ Disponible para posiciones senior de ingeniería, liderazgo técnico y consultor
 ## Métricas de Actividad
 
 <p align="center">
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=bmontes93&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=1f6feb&count_private=true&include_all_commits=true&hide_rank=true&cache_seconds=1800&v=1.8" height="165" alt="Estadísticas de GitHub"/>
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=bmontes93&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&count_private=true&cache_seconds=1800&v=1.8" height="165" alt="Lenguajes Principales"/>
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=bmontes93&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=1f6feb&count_private=true&include_all_commits=true&hide_rank=true&cache_seconds=1800&v=1.9" height="165" alt="Estadísticas de GitHub"/>
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=bmontes93&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&count_private=true&cache_seconds=1800&v=1.9" height="165" alt="Lenguajes Principales"/>
 </p>
 
 ---
