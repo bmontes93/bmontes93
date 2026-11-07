@@ -5,7 +5,9 @@
 <h1 align="center">Bryan Montes · Thekerdruid</h1>
 
 <p align="center">
-  <strong>Senior Full Stack & Systems Engineer &nbsp;|&nbsp; IA Aplicada & Visión Artificial &nbsp;|&nbsp; Arquitecturas de Alto Rendimiento</strong>
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=58A6FF&center=true&vCenter=true&width=750&lines=Especialista+en+Visi%C3%B3n+Artificial+%26+IA+de+Baja+Latencia;Arquitecturas+Distribuidas+%26+Sistemas+de+Alta+Concurrencia;Desarrollo+Full+Stack+con+Next.js+15+%2B+Three.js+3D;Ingenier%C3%ADa+de+Alto+Rendimiento+orientada+a+Producci%C3%B3n" alt="Typing SVG" />
+  </a>
 </p>
 
 <p align="center">
@@ -29,75 +31,29 @@
 
 ---
 
-## Sobre Mí & Filosofía de Ingeniería
+<div align="center">
 
-Soy **Bryan Montes**, desarrollador y arquitecto de software enfocado en la construcción de **sistemas de alta concurrencia, pipelines avanzados de Inteligencia Artificial y arquitecturas web de alto rendimiento**. Mi trabajo combina análisis matemático, optimización a bajo nivel y diseño de infraestructuras desacopladas:
+| Inferencia IA | Simulación Estocástica | Rendimiento Frontend | Integración Continua |
+| :---: | :---: | :---: | :---: |
+| **CUDA FP16 / Tensor Cores**<br/>`Inferencia sub-frame optimizada` | **> 1,000,000 giros/s**<br/>`CSPRNG Monte Carlo Engine` | **Lighthouse 95+ Score**<br/>`WebGL / 60 FPS Estables` | **GitHub Actions**<br/>`CI/CD Automatizado` |
 
-- **Arquitectura Limpia & Modular:** Construcción de sistemas desacoplados, orientados a dominios y basados en microservicios escalables que facilitan la evolución técnica continua sin acumulación de deuda técnica.
-- **Rendimiento Extremo:** Optimización rigurosa de latencia: inferencia acelerada con CUDA/FP16, procesamiento asíncrono y tiempos de respuesta sub-segundo con estrategias SSR/SSG.
-- **Experiencias Interactivas 3D:** Integración de gráficos en tiempo real mediante WebGL y Three.js, manteniendo estándares de rendimiento Lighthouse 95+.
-
----
-
-## Dominios de Especialidad
-
-| Área Técnica | Stack & Herramientas Clave | Enfoque de Ingeniería |
-| :--- | :--- | :--- |
-| **IA & Visión Artificial** | Python · ONNX Runtime · NVIDIA CUDA · OpenCV · InsightFace | Inferencia en tiempo real (FP16), segmentación facial y restauración generativa |
-| **Machine Learning & Big Data** | XGBoost · LightGBM · Celery · Redis · PostgreSQL · Playwright | Orquestación distribuida, pipelines reactivos y modelos cuantitativos |
-| **Sistemas & iGaming Math** | Node.js · TypeScript · Simulaciones Monte Carlo · CSPRNG | Simulación estocástica masiva (millones de giros/s) y certificación matemática |
-| **Frontend Moderno & 3D Web** | Next.js 15 · React 19 · Three.js · React Three Fiber · TailwindCSS | Renderizado 3D a 60 FPS estables, Server Components y accesibilidad AA |
+</div>
 
 ---
 
-## Estándares de Ingeniería & Prácticas de Desarrollo
+## Perfil Profesional & Filosofía de Ingeniería
 
-- **Tipado Estricto de Extremo a Extremo:** TypeScript configurado en modo estricto en frontend/Node.js y Python tipado estáticamente con chequeo continuo para prevención temprana de regresiones.
-- **Flujo de Integración y Entrega Continua (CI/CD):** Validación automatizada en cada Pull Request mediante GitHub Actions (análisis estático, linting, tests unitarios y de integración).
-- **Infraestructura Inmutable y Reproducible:** Contenerización exhaustiva con Docker y Docker Compose con builds multi-etapa para generar artefactos mínimos, seguros y portables entre entornos.
-- **Diseño Resiliente:** Manejo defensivo de excepciones, colas de tareas con reintentos exponenciales y observabilidad mediante logging estructurado.
+Desarrollador y arquitecto de software especializado en el diseño e implementación de **sistemas de alta concurrencia, pipelines avanzados de Inteligencia Artificial y arquitecturas web de alto rendimiento**. Mi enfoque de ingeniería combina modelado matemático, aceleración por hardware y diseño de infraestructuras desacopladas:
 
----
-
-## Patrones de Diseño & Paradigmas de Arquitectura
-
-- **Sistemas Distribuidos & Backend:**
-  - *CQRS & Arquitectura Orientada a Eventos:* Segregación de responsabilidades de comando y consulta para maximizar el throughput de lectura y asegurar consistencia transaccional en escritura.
-  - *Máquinas de Estado Finito (FSM):* Modelado formal de flujos de verificación bancaria, retención de usuarios y transiciones de estado deterministas en servicios asíncronos y bots.
-  - *Inversión de Dependencias:* Desacoplamiento de la infraestructura mediante patrones de Repositorio y Service Layer en FastAPI, Node.js y Next.js.
-- **Inferencia de IA & Procesamiento de Datos:**
-  - *Worker Pools & Pipelines Asíncronos:* Distribución de carga con Celery y Redis para aislar tareas CPU/GPU-intensivas sin bloquear el bucle de eventos principal.
-  - *Model Caching & Quantization:* Optimización de memoria en inferencia mediante modelos ONNX en media precisión (FP16) y precarga de pesos en VRAM para eliminar cold-starts.
-- **Frontend de Alto Rendimiento:**
-  - *React Server Components (RSC):* Minimización del tamaño del bundle JavaScript del cliente y serialización eficiente de datos directamente desde el servidor.
-  - *Atomic Design & Shaders WebGL:* Componentización modular estricta y optimización de shaders GLSL para renderizado 3D a 60 FPS estables.
-
----
-
-## Seguridad, Hardening & Criptografía
-
-- **Aleatoriedad Criptográfica Certificable (CSPRNG):** Generación de entropía estadística no predecible conforme a normativas internacionales de certificación de software para iGaming (GLI / iTech Labs).
-- **Validación Estricta en Fronteras:** Validación en tiempo de compilación y runtime de esquemas de datos mediante Pydantic (Python) y Zod (TypeScript), previniendo inyecciones y datos malformados antes de ingresar a la capa de dominio.
-- **Defensa en Profundidad & Control de Acceso:**
-  - Hashing criptográfico robusto (Argon2 / bcrypt) para credenciales y autenticación basada en tokens JWT con expiración corta y rotación.
-  - Limitación de tasa (*Rate Limiting*) defensiva en memoria sobre Redis para mitigar ataques de fuerza bruta y denegación de servicio (DDoS).
-- **Firma Criptográfica & Cadena de Suministro:** Firma obligatoria de commits y releases mediante claves criptográficas GPG/SSH, impidiendo suplantaciones y asegurando la procedencia inmutable del código.
-
----
-
-## Investigación & Exploración Técnica Activa (I+D)
-
-Líneas de investigación tecnológica y desarrollo experimental continuo:
-
-- **Sistemas de Agentes Autónomos & LLMs Locales:** Cuantización eficiente de modelos de lenguaje (GGUF, AWQ), inferencia de baja latencia con vLLM y orquestación de agentes con memorias vectoriales.
-- **Aceleración con Rust & WebAssembly:** Compilación de núcleos matemáticos y de simulación a WASM para ejecutar procesamiento intensivo a velocidad nativa en navegadores.
-- **Patrones Event-Driven Distribuidos:** Implementación de Event Sourcing y CQRS para arquitecturas distribuidas de alta concurrencia y consistencia eventual.
+- **Arquitectura Limpia & Modular:** Construcción de sistemas basados en microservicios, eventos asíncronos y separación estricta de responsabilidades para garantizar mantenibilidad sin deuda técnica.
+- **Rendimiento Extremo:** Optimización rigurosa de latencia: inferencia acelerada con CUDA/FP16, procesamiento distribuido y tiempos de carga sub-segundo con estrategias SSR/SSG.
+- **Experiencias Interactivas 3D:** Integración de gráficos en tiempo real mediante WebGL y Three.js, alcanzando 60 FPS estables y puntuaciones Lighthouse 95+.
 
 ---
 
 ## Blueprint de Arquitectura de Referencia para Producción
 
-Diseño de arquitectura distribuida estándar implementado para soluciones que requieren alta disponibilidad, tolerancia a fallos y procesamiento concurrente:
+Diseño de arquitectura distribuida implementado para sistemas que demandan alta disponibilidad, tolerancia a fallos y procesamiento concurrente:
 
 ```mermaid
 flowchart TD
@@ -128,81 +84,134 @@ flowchart TD
 
 ---
 
-## Proyectos Destacados
+## Proyectos Destacados (Showcase Grid)
 
-### [EXON-FACE](https://github.com/bmontes93/EXON-FACE) — Sistema de Visión Artificial y Procesamiento Facial
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![ONNX](https://img.shields.io/badge/ONNX_Runtime-007EC6?style=flat-square&logo=onnx&logoColor=white)
-![CUDA](https://img.shields.io/badge/NVIDIA_CUDA_FP16-76B900?style=flat-square&logo=nvidia&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-
-Motor de análisis, segmentación y transposición facial de alta fidelidad diseñado para flujos de procesamiento en imagen y vídeo de calidad cinematográfica.
-
-```mermaid
-flowchart LR
-    A[Ingesta de Fotograma] --> B[Segmentación BiSeNet]
-    B --> C[Alineación InsightFace]
-    C --> D[Inferencia ONNX Runtime CUDA FP16]
-    D --> E[Restauración CodeFormer / GFPGAN]
-    E --> F[Composición Final de Alta Fidelidad]
-```
-
-- **Pipeline de Inferencia:** Segmentación anatómica a nivel de píxel mediante BiSeNet para generación de máscaras faciales exactas (ojos, labios y contornos). Incorpora restauración generativa con CodeFormer y GFPGAN para reconstrucción nítida en baja resolución.
-- **Aceleración por Hardware:** Motor sobre ONNX Runtime optimizado para núcleos NVIDIA CUDA en media precisión (FP16), reduciendo drásticamente la latencia por fotograma.
-- **Entorno de Producción:** Empaquetado completo en Docker, scripts de inicialización automatizados, CLI para procesamiento en lote e interfaz gráfica interactiva en Gradio.
-- **Accesos Técnicos:** [Código Fuente](https://github.com/bmontes93/EXON-FACE) &nbsp;·&nbsp; [Documentación del Repositorio](https://github.com/bmontes93/EXON-FACE#readme)
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>EXON-FACE</h3>
+      <p><b>Sistema de Visión Artificial & Procesamiento Facial</b></p>
+      <p>
+        <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+        <img src="https://img.shields.io/badge/CUDA_FP16-76B900?style=flat-square&logo=nvidia&logoColor=white" />
+        <img src="https://img.shields.io/badge/ONNX-007EC6?style=flat-square&logo=onnx&logoColor=white" />
+        <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+      </p>
+      <p>Motor de análisis, segmentación y transposición facial de alta fidelidad diseñado para flujos de vídeo de calidad cinematográfica.</p>
+      <ul>
+        <li><b>Segmentación BiSeNet:</b> Máscaras anatómicas a nivel de píxel (ojos, labios, piel).</li>
+        <li><b>Restauración Generativa:</b> CodeFormer y GFPGAN integrados para baja resolución.</li>
+        <li><b>Aceleración Hardware:</b> ONNX Runtime con Tensor Cores CUDA FP16.</li>
+      </ul>
+      <p>
+        <a href="https://github.com/bmontes93/EXON-FACE"><b>[Ver Código Fuente]</b></a> &nbsp;
+        <a href="https://github.com/bmontes93/EXON-FACE#readme"><b>[Documentación]</b></a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>Motor Predictivo ML</h3>
+      <p><b>Pipeline Cuantitativo & Value-Betting Deportivo</b></p>
+      <p>
+        <img src="https://img.shields.io/badge/Status-Producción-00c853?style=flat-square" />
+        <img src="https://img.shields.io/badge/ML-XGBoost_LightGBM-FF6F00?style=flat-square" />
+        <img src="https://img.shields.io/badge/Celery-Redis-37814A?style=flat-square" />
+        <img src="https://img.shields.io/badge/Playwright-Scraping-2EAD33?style=flat-square" />
+      </p>
+      <p>Sistema analítico continuo de extracción masiva en tiempo real, modelado estadístico y detección de ineficiencias de mercado.</p>
+      <ul>
+        <li><b>Orquestación por Fases:</b> T-24h contexto, T-12h cuotas base, T-60m alineaciones y T-55m inferencia.</li>
+        <li><b>Modelado Probabilístico:</b> Cálculo de probabilidad real (<code>P_bot</code>) sobre mercados de alta liquidez.</li>
+        <li><b>Ventaja Matemática:</b> Margen probabilístico (<code>(1 / P_bot) * (1 + α) &lt; Cuota</code>).</li>
+      </ul>
+      <p>
+        <b>[Sistema Propietario en Producción]</b>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>quantslot-sdk</h3>
+      <p><b>Motor Matemático & Simulación Estocástica</b></p>
+      <p>
+        <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" />
+        <img src="https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white" />
+        <img src="https://img.shields.io/badge/Monte_Carlo-purple?style=flat-square" />
+        <img src="https://img.shields.io/badge/CSPRNG-Seguro-00c853?style=flat-square" />
+      </p>
+      <p>Motor matemático de simulación probabilística y certificación de juegos conforme a estándares técnicos GLI y iTech Labs.</p>
+      <ul>
+        <li><b>Simulador Masivo:</b> Evaluación de millones de tiradas en segundos para certificar RTP y volatilidad.</li>
+        <li><b>Mecánicas Dinámicas:</b> Matrices Cluster-Pay (5x5), cascadas infinitas y bonificaciones.</li>
+        <li><b>Aleatoriedad CSPRNG:</b> Entropía criptográfica sin sesgos ni predictibilidad.</li>
+      </ul>
+      <p>
+        <a href="https://github.com/bmontes93/quantslot-sdk"><b>[Ver Código Fuente]</b></a> &nbsp;
+        <a href="https://github.com/bmontes93/quantslot-sdk#readme"><b>[SDK Reference]</b></a>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>TAHUAGYM</h3>
+      <p><b>Plataforma Web 3D & Alto Rendimiento</b></p>
+      <p>
+        <img src="https://img.shields.io/badge/Next.js_15-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
+        <img src="https://img.shields.io/badge/Three.js_3D-000000?style=flat-square&logo=three.js&logoColor=white" />
+        <img src="https://img.shields.io/badge/Lighthouse-95%2B_Score-00c853?style=flat-square&logo=lighthouse&logoColor=white" />
+        <img src="https://img.shields.io/badge/Tailwind-v4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" />
+      </p>
+      <p>Plataforma web comercial orientada a una experiencia interactiva inmersiva, logrando puntuaciones de rendimiento sobresalientes.</p>
+      <ul>
+        <li><b>Arquitectura SSR/SSG:</b> App Router con React Server Components y bundle optimizado.</li>
+        <li><b>Visualizador 3D:</b> Three.js y React Three Fiber con geometrías optimizadas a 60 FPS estables.</li>
+        <li><b>SEO & Accesibilidad:</b> WCAG AA compliant y datos estructurados JSON-LD.</li>
+      </ul>
+      <p>
+        <b>[Plataforma Comercial Desplegada]</b>
+      </p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-### Motor Predictivo ML & Value-Betting Deportivo
-![Status](https://img.shields.io/badge/Status-En_Producción-00c853?style=flat-square)
-![ML](https://img.shields.io/badge/XGBoost_&_LightGBM-FF6F00?style=flat-square)
-![Celery](https://img.shields.io/badge/Celery_&_Redis-37814A?style=flat-square)
-![Playwright](https://img.shields.io/badge/Playwright_Scraping-2EAD33?style=flat-square)
+## Dominios de Especialidad & Competencias Técnicas
 
-Pipeline cuantitativo continuo de extracción de datos en tiempo real, modelado estadístico y detección de ineficiencias de cuotas en fútbol internacional.
-
-```mermaid
-flowchart LR
-    T24[T-24h: Scraping & Contexto] --> T12[T-12h: Captura de Cuotas Base]
-    T12 --> T60[T-60m: Alineaciones Sofascore]
-    T60 --> T55[T-55m: Inferencia XGBoost / LightGBM]
-    T55 --> EDGE[Evaluación de Edge Probabilístico]
-    EDGE --> ALERT[Alerta Operativa con Valor Esperado]
-```
-
-- **Orquestación Temporal Automatizada:** Pipeline asíncrono accionado por ventanas temporales estrictas: análisis de noticias y bajas en T-24h, captura de cuotas base en T-12h, extracción reactiva de alineaciones oficiales en T-60min (Sofascore) e inferencia probabilística en T-55min.
-- **Modelado Probabilístico Calibrado:** Algoritmos supervisados (XGBoost y LightGBM) entrenados para estimar la probabilidad real (`P_bot`) sobre mercados de alta liquidez (córneres, tarjetas y goles combinados).
-- **Ventaja Matemática (Edge):** Filtro cuantitativo con margen de seguridad probabilístico (`(1 / P_bot) * (1 + α) < Cuota_Bookie` con `α = 0.05`), disparando alertas de valor esperado positivo únicamente cuando existe una ineficiencia medible en el mercado.
+| Área Técnica | Stack Clave | Enfoque de Ingeniería |
+| :--- | :--- | :--- |
+| **IA & Visión Artificial** | Python · ONNX Runtime · NVIDIA CUDA · OpenCV · InsightFace | Inferencia en tiempo real (FP16), segmentación facial y restauración generativa |
+| **Machine Learning & Big Data** | XGBoost · LightGBM · Celery · Redis · PostgreSQL · Playwright | Orquestación distribuida, pipelines reactivos y modelos cuantitativos |
+| **Sistemas & iGaming Math** | Node.js · TypeScript · Simulaciones Monte Carlo · CSPRNG | Simulación estocástica masiva (millones de giros/s) y certificación matemática |
+| **Frontend Moderno & 3D Web** | Next.js 15 · React 19 · Three.js · React Three Fiber · TailwindCSS | Renderizado 3D a 60 FPS estables, Server Components y accesibilidad AA |
 
 ---
 
-### [quantslot-sdk](https://github.com/bmontes93/quantslot-sdk) — Motor Matemático y Simulación Estocástica para iGaming
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white)
-![NodeJS](https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white)
-![MonteCarlo](https://img.shields.io/badge/Simulaciones_Monte_Carlo-purple?style=flat-square)
-![CSPRNG](https://img.shields.io/badge/Seguridad-CSPRNG-success?style=flat-square)
+## Patrones de Arquitectura, Seguridad & I+D
 
-Motor matemático de simulación probabilística y certificación de slots digitales conforme a los estándares técnicos exigidos por laboratorios internacionales (GLI, iTech Labs).
-
-- **Simulador Monte Carlo Masivo:** Capacidad para ejecutar millones de giros en pocos segundos, validando empíricamente curvas de volatilidad, distribución de frecuencias (*hit frequency*) y RTP teórico.
-- **Mecánicas Dinámicas Complejas:** Soporte para estructuras dinámicas Cluster-Pay (5x5), sistemas de cascadas infinitas, multiplicadores acumulativos y rondas de bonificación multinivel.
-- **Aleatoriedad Certificable:** Generador de números aleatorios criptográficamente segura (CSPRNG) para garantizar uniformidad estadística y total ausencia de patrones predictibles.
-- **Accesos Técnicos:** [Código Fuente](https://github.com/bmontes93/quantslot-sdk) &nbsp;·&nbsp; [Documentación del SDK](https://github.com/bmontes93/quantslot-sdk#readme)
+- **Patrones Arquitectónicos:** Segregación CQRS, Arquitectura Orientada a Eventos (EDA), Máquinas de Estado Finito (FSM) para procesos transaccionales y patrón Repositorio / Service Layer desacoplado.
+- **Seguridad & Hardening:** Generación criptográfica CSPRNG certificable, validación estricta de esquemas en runtime con Pydantic y Zod, hashing Argon2/bcrypt, JWT con rotación y rate-limiting en memoria con Redis.
+- **Investigación Activa (I+D):** Inferencia local de LLMs mediante cuantización GGUF/AWQ con vLLM, compilación de algoritmos matemáticos a WebAssembly con Rust y patrones Event Sourcing.
 
 ---
 
-### TAHUAGYM — Plataforma Web de Alto Rendimiento con Renderizado 3D
-![NextJS](https://img.shields.io/badge/Next.js_15-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![ThreeJS](https://img.shields.io/badge/Three.js_3D-000000?style=flat-square&logo=three.js&logoColor=white)
-![Lighthouse](https://img.shields.io/badge/Lighthouse-95%2B_Score-00c853?style=flat-square&logo=lighthouse&logoColor=white)
-![Tailwind](https://img.shields.io/badge/TailwindCSS_v4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+## Stack Tecnológico
 
-Plataforma web comercial diseñada para brindar una experiencia interactiva inmersiva y cinematográfica, manteniendo un rendimiento sobresaliente de **Lighthouse 95+**.
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,pytorch,opencv,nodejs,typescript,fastapi,postgres,redis,nextjs,react,threejs,tailwind,docker,githubactions,linux&theme=dark" alt="Tech Stack Icons" />
+</p>
 
-- **Arquitectura Web Moderna:** Renderizado híbrido SSR/SSG mediante Next.js App Router (React Server Components), arquitectura de diseño atómico y carga perezosa (*lazy loading*) de recursos pesados.
-- **Visualizador 3D en Tiempo Real:** Renderizado interactivo de productos mediante Three.js y React Three Fiber con geometrías y shaders optimizados para mantener 60 FPS estables en dispositivos móviles y de escritorio.
-- **Accesibilidad y SEO Técnico:** Cumplimiento de estándares WCAG AA, navegación completa por teclado, estructura semántica e integración de datos estructurados JSON-LD.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/NVIDIA_CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white" alt="CUDA"/>
+  <img src="https://img.shields.io/badge/ONNX_Runtime-007EC6?style=flat-square&logo=onnx&logoColor=white" alt="ONNX"/>
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js"/>
+  <img src="https://img.shields.io/badge/Three.js-000000?style=flat-square&logo=three.js&logoColor=white" alt="Three.js"/>
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" alt="FastAPI"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" alt="Redis"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white" alt="GitHub Actions"/>
+  <img src="https://img.shields.io/badge/PyTest-0A9EDC?style=flat-square&logo=pytest&logoColor=white" alt="PyTest"/>
+</p>
 
 ---
 
@@ -217,128 +226,43 @@ Plataforma web comercial diseñada para brindar una experiencia interactiva inme
 
 ---
 
-## Trayectoria de Impacto & Hitos Técnicos
-
-| Dominio de Ingeniería | Hito Técnico / Impacto de Producción | Paradigma Tecnológico |
-| :--- | :--- | :--- |
-| **Simulación Estocástica** | Motor de certificación para iGaming capaz de procesar >1,000,000 giros/segundo sin desviación estadística | Node.js · CSPRNG · Monte Carlo |
-| **Visión Artificial en Tiempo Real** | Pipeline cinematográfico de transposición facial con latencia minimizada en GPUs con Tensor Cores | Python · ONNX Runtime · CUDA FP16 |
-| **Modelado Predictivo Deportivo** | Orquestación distribuida de extracción, inferencia y evaluación de cuotas en <90s antes del inicio de eventos | XGBoost · Celery · Redis · Playwright |
-| **Plataformas Web Inmersivas** | Experiencia comercial con renderizado 3D interactivo en tiempo real alcanzando puntuaciones Lighthouse 95+ | Next.js · Three.js · React Three Fiber |
-| **Automatización & Ecosistemas SaaS** | Arquitectura modular de bots y gestión de membresías con verificación FSM y pasarelas de pago | FastAPI · PostgreSQL · aiogram 3 · Docker |
-
----
-
 <details>
-<summary><b>Ver más proyectos de arquitectura y software especializado</b></summary>
+<summary><b>Ver proyectos adicionales de arquitectura y software especializado</b></summary>
 
 <br/>
 
 #### Ecosistema SaaS de Automatización & Pagos para Telegram
 > **Python · aiogram 3 · FastAPI · PostgreSQL · SQLAlchemy 2.0 · Redis · APScheduler · Docker**
-
-Arquitectura distribuida para control de accesos, verificación de pagos y retención de usuarios en comunidades privadas mediante tres bots paralelos:
-* **Verificación:** Procesamiento y validación de comprobantes bancarios mediante máquinas de estado finito (FSM), delegación a paneles administrativos y emisión de enlaces de invitación de un solo uso.
-* **Retención:** Agente en segundo plano con APScheduler para avisos preventivos de renovación y revocación automática de membresías inactivas.
-* **Difusión:** Módulo de comunicaciones segmentadas para campañas programadas de reactivación.
+* Arquitectura distribuida para control de accesos, verificación de comprobantes mediante máquinas de estado finito (FSM), alertas con APScheduler y campañas segmentadas.
 
 ---
 
 #### ALL-DAY — Plataforma SaaS para Gestión de Eventos
 > **Next.js 15 · React 19 · TypeScript · PostgreSQL · Prisma ORM · Culqi · Resend · Pusher**
-
-Plataforma integral para reservas de eventos y conexión de proveedores locales:
-* **Seguridad:** Flujo de validación de identidad de prestadores de servicios y mensajería interna con privacidad protegida.
-* **Transaccionalidad:** Sistema de reservas con pagos divididos (anticipo del 50%) integrado con la pasarela Culqi.
-* **Tiempo Real:** Notificaciones Push nativas vía Service Workers y avisos in-app en tiempo real mediante Pusher.
+* Sistema de reservas y pagos fraccionados (anticipo del 50%) con Culqi, verificación de identidad y notificaciones push nativas vía Service Workers.
 
 ---
 
 #### [CALC101NG](https://github.com/bmontes93/CALC101NG) — Motor de Cálculo Simbólico y Gráficas Dinámicas
 > **React · TypeScript · Vite · MathLive · Function-Plot · Python · FastAPI · SymPy · Docker**
-
-Plataforma de análisis matemático simbólico:
-* Backend asíncrono con FastAPI y SymPy para simplificación algebraica, derivadas e integrales analíticas en milisegundos.
-* Editor visual interactivo WYSIWYG mediante MathLive y graficación matemática en 2D reactiva con Function-Plot.
-* **Accesos Técnicos:** [Código Fuente](https://github.com/bmontes93/CALC101NG) &nbsp;·&nbsp; [Documentación de la API](https://github.com/bmontes93/CALC101NG#readme)
+* Backend asíncrono con FastAPI y SymPy para simplificación algebraica analítica en milisegundos y editor visual interactivo WYSIWYG con MathLive.
+* **[Código Fuente](https://github.com/bmontes93/CALC101NG)** &nbsp;·&nbsp; **[Documentación de API](https://github.com/bmontes93/CALC101NG#readme)**
 
 ---
 
 #### [GEST E-Commerce](https://github.com/bmontes93/GEST-E-COMERCE) — Arquitectura E-Commerce Desacoplada
 > **TypeScript · React · Vite · Python · FastAPI · Docker Compose · JWT**
-
-Infraestructura de tienda virtual con separación completa entre capa de presentación y servicios de backend:
-* Microservicios contenerizados de despliegue independiente orquestados con Docker Compose.
-* Sistema de autenticación seguro basado en tokens JWT y panel administrativo integral para inventario y órdenes.
-* **Accesos Técnicos:** [Código Fuente](https://github.com/bmontes93/GEST-E-COMERCE)
+* Microservicios contenerizados de despliegue independiente mediante Docker Compose y panel administrativo integral para inventario y órdenes.
+* **[Código Fuente](https://github.com/bmontes93/GEST-E-COMERCE)**
 
 ---
 
 #### [Hide-Clone-USB](https://github.com/bmontes93/Hide-Clone-USB) — Servicio de Sincronización Orientado a Eventos
 > **PowerShell · Robocopy (32 Hilos) · Windows Task Scheduler**
-
-Servicio silencioso en segundo plano para sincronización y respaldo automatizado de unidades de almacenamiento:
-* Desencadenamiento reactivo mediante eventos de sistema (`DriverFrameworks`), eliminando el consumo continuo de CPU por polling.
-* Copia masiva multihilo a 32 subprocesos concurrentes con permisos elevados del sistema operativo.
-* **Accesos Técnicos:** [Código Fuente](https://github.com/bmontes93/Hide-Clone-USB)
+* Respaldo reactivo desencadenado por eventos de kernel de Windows (`DriverFrameworks`), sin consumo continuo de CPU por sondeo y copia masiva a 32 subprocesos.
+* **[Código Fuente](https://github.com/bmontes93/Hide-Clone-USB)**
 
 </details>
-
----
-
-## Stack Tecnológico
-
-### Inteligencia Artificial & Computación Científica
-<p align="left">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/NVIDIA_CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="CUDA"/>
-  <img src="https://img.shields.io/badge/ONNX_Runtime-007EC6?style=for-the-badge&logo=onnx&logoColor=white" alt="ONNX Runtime"/>
-  <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV"/>
-  <img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn"/>
-</p>
-
-### Frontend & Arquitectura Web
-<p align="left">
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js"/>
-  <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js"/>
-  <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS"/>
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
-</p>
-
-### Backend, Bases de Datos & Caché
-<p align="left">
-  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js"/>
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/>
-  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis"/>
-  <img src="https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma"/>
-  <img src="https://img.shields.io/badge/SQLAlchemy-D71F00?style=for-the-badge&logo=sqlalchemy&logoColor=white" alt="SQLAlchemy"/>
-  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite"/>
-</p>
-
-### Testing, DevOps & Automatización
-<p align="left">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
-  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" alt="GitHub Actions"/>
-  <img src="https://img.shields.io/badge/PyTest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white" alt="PyTest"/>
-  <img src="https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white" alt="Playwright"/>
-  <img src="https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white" alt="Celery"/>
-  <img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white" alt="PowerShell"/>
-</p>
-
----
-
-## Entorno de Desarrollo & Estación de Trabajo
-
-| Componente | Especificación Técnica | Propósito de Ingeniería |
-| :--- | :--- | :--- |
-| **Cómputo & Aceleración Local** | GPU NVIDIA con Tensor Cores (CUDA / FP16 / INT8) | Prototipado rápido de modelos, benchmarking y cuantización de inferencia |
-| **Sistema Operativo & Runtimes** | Linux (Debian / WSL2) & Docker Engine Nativo | Aislamiento estricto de dependencias y paridad dev/prod idéntica |
-| **Terminal & Tooling CLI** | PowerShell / Zsh · ripgrep · fd · fzf | Navegación de código de alta velocidad y automatización local |
-| **IDEs & Editores** | Neovim / VS Code Headless | Entorno de desarrollo desacoplado, ligero y optimizado para tipado estricto |
 
 ---
 
@@ -356,8 +280,8 @@ Disponible para posiciones senior de ingeniería, liderazgo técnico y consultor
 ## Métricas de Actividad
 
 <p align="center">
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=bmontes93&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=1f6feb&count_private=true&include_all_commits=true&hide_rank=true&cache_seconds=1800&v=1.9" height="165" alt="Estadísticas de GitHub"/>
-  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=bmontes93&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&count_private=true&cache_seconds=1800&v=1.9" height="165" alt="Lenguajes Principales"/>
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=bmontes93&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=1f6feb&count_private=true&include_all_commits=true&hide_rank=true&cache_seconds=1800&v=2.0" height="165" alt="Estadísticas de GitHub"/>
+  <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=bmontes93&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&count_private=true&cache_seconds=1800&v=2.0" height="165" alt="Lenguajes Principales"/>
 </p>
 
 ---
