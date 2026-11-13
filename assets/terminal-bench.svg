@@ -1,45 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 250" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 264" width="100%" height="100%">
   <defs>
     <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#090D16"/>
       <stop offset="100%" stop-color="#05080F"/>
     </linearGradient>
+
+    <!-- Progressive Command Typing Clip Paths -->
+    <clipPath id="typeCmd1">
+      <rect x="0" y="-14" width="700" height="22">
+        <animate attributeName="width" values="0; 640; 640" keyTimes="0; 0.14; 1" calcMode="spline" keySplines="0.16 1 0.3 1; 0 0 1 1" dur="9s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <clipPath id="typeCmd2">
+      <rect x="0" y="-14" width="700" height="22">
+        <animate attributeName="width" values="0; 0; 640; 640" keyTimes="0; 0.26; 0.40; 1" calcMode="spline" keySplines="0 0 1 1; 0.16 1 0.3 1; 0 0 1 1" dur="9s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <clipPath id="typeCmd3">
+      <rect x="0" y="-14" width="700" height="22">
+        <animate attributeName="width" values="0; 0; 640; 640" keyTimes="0; 0.52; 0.66; 1" calcMode="spline" keySplines="0 0 1 1; 0.16 1 0.3 1; 0 0 1 1" dur="9s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
   </defs>
 
   <style>
     .font-mono { font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace; }
-
-    @keyframes blinkCursor {
-      0%, 49% { opacity: 1; }
-      50%, 100% { opacity: 0; }
-    }
-
-    @keyframes lineReveal1 {
-      0%, 5% { opacity: 0; transform: translateY(4px); }
-      12%, 100% { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes lineReveal2 {
-      0%, 22% { opacity: 0; transform: translateY(4px); }
-      30%, 100% { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes lineReveal3 {
-      0%, 42% { opacity: 0; transform: translateY(4px); }
-      50%, 100% { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes lineReveal4 {
-      0%, 62% { opacity: 0; transform: translateY(4px); }
-      70%, 100% { opacity: 1; transform: translateY(0); }
-    }
-
-    .l1 { animation: lineReveal1 8s cubic-bezier(0.16, 1, 0.3, 1) infinite; }
-    .l2 { animation: lineReveal2 8s cubic-bezier(0.16, 1, 0.3, 1) infinite; }
-    .l3 { animation: lineReveal3 8s cubic-bezier(0.16, 1, 0.3, 1) infinite; }
-    .l4 { animation: lineReveal4 8s cubic-bezier(0.16, 1, 0.3, 1) infinite; }
-    .cursor { animation: blinkCursor 1s step-end infinite; }
   </style>
 
   <!-- Terminal Window Frame -->
-  <rect width="1200" height="250" rx="12" fill="url(#termBg)" stroke="#1E293B" stroke-width="1.5"/>
+  <rect width="1200" height="264" rx="12" fill="url(#termBg)" stroke="#1E293B" stroke-width="1.5"/>
 
   <!-- Top Title Bar -->
   <rect width="1200" height="34" rx="12" fill="#0F172A"/>
@@ -49,42 +38,106 @@
   <circle cx="20" cy="17" r="5" fill="#EF4444" fill-opacity="0.8"/>
   <circle cx="36" cy="17" r="5" fill="#F59E0B" fill-opacity="0.8"/>
   <circle cx="52" cy="17" r="5" fill="#10B981" fill-opacity="0.8"/>
-  <text x="76" y="21" class="font-mono" font-size="11.5" font-weight="600" fill="#94A3B8">thekerdruid@workstation-cuda:~/benchmarks — zsh (Debian WSL2 / NVIDIA CUDA 12.4)</text>
-  <text x="1058" y="21" class="font-mono" font-size="10.5" fill="#38BDF8">GPG: SIGNED</text>
+  <text x="76" y="21" class="font-mono" font-size="11" font-weight="600" fill="#94A3B8">tmux 3.4 · thekerdruid@workstation-cuda:~/benchmarks [pane 0: zsh | pane 1: nvtop]</text>
+  <text x="1058" y="21" class="font-mono" font-size="10.5" font-weight="700" fill="#38BDF8">GPG: VERIFIED</text>
 
-  <!-- Terminal Output Content -->
-  <g transform="translate(28, 60)" class="font-mono" font-size="12">
+  <!-- Tmux Vertical Split Divider -->
+  <line x1="788" y1="34" x2="788" y2="240" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- ==================== LEFT PANE: LIVE CLI BENCHMARK RUNNER ==================== -->
+  <g transform="translate(24, 58)" class="font-mono" font-size="11.2">
     <!-- Command 1 -->
-    <g class="l1">
-      <text x="0" y="0" fill="#10B981" font-weight="700">➜</text>
-      <text x="20" y="0" fill="#38BDF8" font-weight="700">~/exon-face</text>
-      <text x="115" y="0" fill="#F8FAFC">python benchmark_onnx.py --model bisenet_fp16.onnx --provider CUDAExecutionProvider</text>
-      <text x="20" y="22" fill="#94A3B8">[TensorRT/CUDA:0] Warmup complete · Batch=1 · Res=512x512 · <tspan fill="#34D399" font-weight="700">Latency: 11.42 ms/frame (87.5 FPS)</tspan> · mIoU: 0.992</text>
+    <g>
+      <text x="0" y="0" fill="#10B981" font-weight="700">&gt;</text>
+      <text x="16" y="0" fill="#38BDF8" font-weight="700">~/exon-face</text>
+      <g clip-path="url(#typeCmd1)">
+        <text x="104" y="0" fill="#F8FAFC">python bench_onnx.py --fp16 --provider CUDAExecutionProvider</text>
+      </g>
+      <g>
+        <animate attributeName="opacity" values="0; 0; 1; 1" keyTimes="0; 0.15; 0.20; 1" dur="9s" repeatCount="indefinite"/>
+        <text x="16" y="20" fill="#94A3B8">[TensorRT/CUDA:0] Batch=1 · 512x512 · <tspan fill="#34D399" font-weight="700">11.42 ms/frame (87.5 FPS)</tspan> · mIoU: 0.992</text>
+      </g>
     </g>
 
     <!-- Command 2 -->
-    <g class="l2" transform="translate(0, 50)">
-      <text x="0" y="0" fill="#10B981" font-weight="700">➜</text>
-      <text x="20" y="0" fill="#818CF8" font-weight="700">~/quantslot-sdk</text>
-      <text x="142" y="0" fill="#F8FAFC">npm run sim:montecarlo -- --spins=10000000 --grid=5x5 --rng=csprng</text>
-      <text x="20" y="22" fill="#94A3B8">[MonteCarlo Engine] 10,000,000 spins completed in <tspan fill="#F8FAFC" font-weight="700">1.84s</tspan> · <tspan fill="#818CF8" font-weight="700">Empirical RTP: 96.5012%</tspan> (σ=0.0018) · GLI-19 Entropy: <tspan fill="#34D399" font-weight="700">PASS</tspan></text>
+    <g transform="translate(0, 52)">
+      <text x="0" y="0" fill="#10B981" font-weight="700">&gt;</text>
+      <text x="16" y="0" fill="#818CF8" font-weight="700">~/quantslot</text>
+      <g clip-path="url(#typeCmd2)">
+        <text x="104" y="0" fill="#F8FAFC">npm run sim:montecarlo -- --spins=10000000 --rng=csprng</text>
+      </g>
+      <g>
+        <animate attributeName="opacity" values="0; 0; 1; 1" keyTimes="0; 0.41; 0.46; 1" dur="9s" repeatCount="indefinite"/>
+        <text x="16" y="20" fill="#94A3B8">[MonteCarlo] 10⁷ spins in <tspan fill="#F8FAFC" font-weight="700">1.84s</tspan> · <tspan fill="#818CF8" font-weight="700">RTP: 96.5012%</tspan> (σ=0.0018) · Dieharder: <tspan fill="#34D399" font-weight="700">PASS</tspan></text>
+      </g>
     </g>
 
     <!-- Command 3 -->
-    <g class="l3" transform="translate(0, 100)">
-      <text x="0" y="0" fill="#10B981" font-weight="700">➜</text>
-      <text x="20" y="0" fill="#F59E0B" font-weight="700">~/ml-engine</text>
-      <text x="115" y="0" fill="#F8FAFC">celery -A pipeline call tasks.evaluate_window --args='["T-55m", "alpha=0.05"]'</text>
-      <text x="20" y="22" fill="#94A3B8">[XGBoost+LightGBM] Lineups verified · P_bot=0.618 vs Implied=0.524 · <tspan fill="#34D399" font-weight="700">+EV Edge (+9.4%) Dispatched in 420ms</tspan></text>
+    <g transform="translate(0, 104)">
+      <text x="0" y="0" fill="#10B981" font-weight="700">&gt;</text>
+      <text x="16" y="0" fill="#F59E0B" font-weight="700">~/ml-engine</text>
+      <g clip-path="url(#typeCmd3)">
+        <text x="104" y="0" fill="#F8FAFC">celery -A pipeline call evaluate_window --args='["T-55m"]'</text>
+      </g>
+      <g>
+        <animate attributeName="opacity" values="0; 0; 1; 1" keyTimes="0; 0.67; 0.72; 1" dur="9s" repeatCount="indefinite"/>
+        <text x="16" y="20" fill="#94A3B8">[XGBoost+LightGBM] P_bot=0.618 vs Bookie=0.524 · <tspan fill="#34D399" font-weight="700">+9.4% EV Dispatched (420ms)</tspan></text>
+      </g>
     </g>
 
-    <!-- Command 4 -->
-    <g class="l4" transform="translate(0, 150)">
-      <text x="0" y="0" fill="#10B981" font-weight="700">➜</text>
-      <text x="20" y="0" fill="#38BDF8" font-weight="700">~/workspace</text>
-      <text x="115" y="0" fill="#F8FAFC">pytest --cov=src &amp;&amp; npx playwright test --project=chromium</text>
-      <text x="615" y="0" fill="#34D399" font-weight="700">✓ 148 passed (100% strict typing, 0 warnings)</text>
-      <rect x="975" y="-12" width="9" height="15" fill="#38BDF8" class="cursor"/>
+    <!-- Command 4: Active Prompt + Blinking Block Cursor -->
+    <g transform="translate(0, 154)">
+      <text x="0" y="0" fill="#10B981" font-weight="700">&gt;</text>
+      <text x="16" y="0" fill="#38BDF8" font-weight="700">~/workspace</text>
+      <text x="104" y="0" fill="#F8FAFC">pytest --cov=src &amp;&amp; npx playwright test</text>
+      <text x="412" y="0" fill="#34D399" font-weight="700">[148 PASSED · 0 WARNINGS]</text>
+      <rect x="606" y="-11" width="8" height="14" fill="#38BDF8">
+        <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.49;0.5;1" dur="1s" repeatCount="indefinite"/>
+      </rect>
     </g>
   </g>
+
+  <!-- ==================== RIGHT PANE: LIVE NVTOP / HARDWARE PROFILER ==================== -->
+  <g transform="translate(806, 48)" class="font-mono">
+    <rect width="372" height="178" rx="6" fill="#06090F" stroke="#1E293B" stroke-width="1"/>
+    <text x="14" y="18" font-size="9.5" font-weight="700" fill="#38BDF8">NVTOP · GPU 0 [CUDA 12.4 TENSOR CORES]</text>
+    <text x="298" y="18" font-size="9.5" font-weight="700" fill="#10B981">TEMP: 58°C</text>
+    <line x1="14" y1="26" x2="358" y2="26" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- GPU Compute Bar -->
+    <text x="14" y="42" font-size="9" fill="#94A3B8">SM UTIL</text>
+    <rect x="68" y="34" width="236" height="8" rx="2" fill="#1E293B"/>
+    <rect x="68" y="34" width="218" height="8" rx="2" fill="#38BDF8">
+      <animate attributeName="width" values="210;228;198;222;210" dur="2.2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="314" y="42" font-size="9" font-weight="700" fill="#38BDF8">94.8%</text>
+
+    <!-- VRAM Bar -->
+    <text x="14" y="58" font-size="9" fill="#94A3B8">VRAM</text>
+    <rect x="68" y="50" width="236" height="8" rx="2" fill="#1E293B"/>
+    <rect x="68" y="50" width="142" height="8" rx="2" fill="#818CF8"/>
+    <text x="314" y="58" font-size="9" font-weight="700" fill="#818CF8">2.1GB</text>
+
+    <!-- Live GPU Frame-Time Oscilloscope -->
+    <rect x="14" y="68" width="344" height="58" rx="4" fill="#090D16" stroke="#1E293B" stroke-width="0.8"/>
+    <text x="22" y="80" font-size="8" fill="#64748B">FRAME TIME STREAM (p99: 11.42ms)</text>
+    <path d="M20.0,107.0L30.0,109.0L40.0,109.0L50.0,107.8L60.0,106.5L70.0,105.6L80.0,105.1L90.0,104.2L100.0,102.4L110.0,100.0L120.0,97.8L130.0,97.3L140.0,99.4L150.0,103.6L160.0,108.6L170.0,112.2L180.0,112.9L190.0,110.3L200.0,105.7L210.0,100.9L220.0,97.9L230.0,97.3L240.0,98.9L250.0,101.4L260.0,103.6L270.0,104.8L280.0,105.4L290.0,106.0L300.0,107.2L310.0,108.5L320.0,109.2L330.0,108.1L340.0,105.0L350.0,100.6" fill="none" stroke="#10B981" stroke-width="1.5">
+      <animate attributeName="d" values="M20.0,107.0L30.0,109.0L40.0,109.0L50.0,107.8L60.0,106.5L70.0,105.6L80.0,105.1L90.0,104.2L100.0,102.4L110.0,100.0L120.0,97.8L130.0,97.3L140.0,99.4L150.0,103.6L160.0,108.6L170.0,112.2L180.0,112.9L190.0,110.3L200.0,105.7L210.0,100.9L220.0,97.9L230.0,97.3L240.0,98.9L250.0,101.4L260.0,103.6L270.0,104.8L280.0,105.4L290.0,106.0L300.0,107.2L310.0,108.5L320.0,109.2L330.0,108.1L340.0,105.0L350.0,100.6;M20.0,103.9L30.0,105.3L40.0,105.9L50.0,106.3L60.0,107.1L70.0,108.2L80.0,108.7L90.0,107.7L100.0,104.8L110.0,100.7L120.0,97.0L130.0,95.4L140.0,96.9L150.0,101.2L160.0,106.5L170.0,110.7L180.0,112.2L190.0,110.8L200.0,107.4L210.0,103.7L220.0,101.1L230.0,100.2L240.0,100.4L250.0,100.9L260.0,101.1L270.0,101.1L280.0,101.7L290.0,103.4L300.0,106.4L310.0,109.6L320.0,111.6L330.0,111.0L340.0,107.6L350.0,102.5;M20.0,101.4L30.0,101.6L40.0,102.1L50.0,103.7L60.0,106.4L70.0,109.4L80.0,111.3L90.0,110.8L100.0,107.5L110.0,102.6L120.0,97.8L130.0,95.2L140.0,95.9L150.0,99.4L160.0,104.0L170.0,108.0L180.0,109.9L190.0,109.6L200.0,107.8L210.0,106.0L220.0,104.7L230.0,104.0L240.0,103.2L250.0,101.9L260.0,99.9L270.0,98.3L280.0,98.2L290.0,100.3L300.0,104.5L310.0,109.1L320.0,112.4L330.0,112.6L340.0,109.8L350.0,104.9;M20.0,100.1L30.0,98.7L40.0,98.6L50.0,100.6L60.0,104.5L70.0,109.0L80.0,112.2L90.0,112.6L100.0,109.8L110.0,104.9L120.0,99.9L130.0,96.8L140.0,96.5L150.0,98.7L160.0,102.0L170.0,104.8L180.0,106.4L190.0,106.9L200.0,106.9L210.0,107.1L220.0,107.6L230.0,107.8L240.0,106.7L250.0,103.9L260.0,100.2L270.0,96.9L280.0,95.8L290.0,97.7L300.0,102.1L310.0,107.4L320.0,111.4L330.0,112.6L340.0,110.7L350.0,106.8;M20.0,100.3L30.0,97.2L40.0,96.0L50.0,97.8L60.0,102.1L70.0,107.4L80.0,111.4L90.0,112.7L100.0,110.9L110.0,106.9L120.0,102.6L130.0,99.7L140.0,98.8L150.0,99.6L160.0,101.0L170.0,102.0L180.0,102.6L190.0,103.3L200.0,104.6L210.0,106.8L220.0,109.3L230.0,110.7L240.0,109.9L250.0,106.6L260.0,101.7L270.0,97.3L280.0,95.1L290.0,96.1L300.0,100.0L310.0,104.9L320.0,109.0L330.0,110.7L340.0,110.0L350.0,107.8;M20.0,101.8L30.0,97.3L40.0,95.1L50.0,96.1L60.0,99.9L70.0,105.0L80.0,109.2L90.0,111.1L100.0,110.3L110.0,107.9L120.0,105.2L130.0,103.2L140.0,102.3L150.0,101.9L160.0,101.3L170.0,100.3L180.0,99.4L190.0,99.6L200.0,101.6L210.0,105.3L220.0,109.4L230.0,112.2L240.0,112.2L250.0,109.1L260.0,104.0L270.0,99.0L280.0,96.1L290.0,96.2L300.0,98.9L310.0,102.6L320.0,105.9L330.0,107.5L340.0,107.8L350.0,107.3;M20.0,104.0L30.0,99.0L40.0,96.0L50.0,96.0L60.0,98.7L70.0,102.7L80.0,106.1L90.0,108.0L100.0,108.2L110.0,107.5L120.0,106.8L130.0,106.5L140.0,106.2L150.0,105.2L160.0,103.0L170.0,100.0L180.0,97.4L190.0,96.6L200.0,98.6L210.0,103.0L220.0,108.1L230.0,111.9L240.0,112.8L250.0,110.6L260.0,106.2L270.0,101.7L280.0,98.7L290.0,98.0L300.0,99.2L310.0,101.2L320.0,102.8L330.0,103.7L340.0,104.4L350.0,105.4;M20.0,106.2L30.0,101.5L40.0,98.4L50.0,97.6L60.0,99.0L70.0,101.2L80.0,103.1L90.0,104.2L100.0,104.9L110.0,105.7L120.0,107.1L130.0,108.7L140.0,109.6L150.0,108.6L160.0,105.5L170.0,101.1L180.0,97.0L190.0,95.2L200.0,96.5L210.0,100.7L220.0,105.9L230.0,110.1L240.0,111.7L250.0,110.6L260.0,107.6L270.0,104.4L280.0,102.1L290.0,101.2L300.0,101.1L310.0,101.1L320.0,100.6L330.0,100.2L340.0,100.6L350.0,102.6;M20.0,107.7L30.0,104.2L40.0,101.7L50.0,100.7L60.0,100.8L70.0,101.0L80.0,100.9L90.0,100.7L100.0,101.1L110.0,102.9L120.0,106.0L130.0,109.5L140.0,111.8L150.0,111.4L160.0,108.2L170.0,103.1L180.0,98.2L190.0,95.5L200.0,95.9L210.0,99.1L220.0,103.5L230.0,107.2L240.0,109.0L250.0,108.9L260.0,107.7L270.0,106.4L280.0,105.6L290.0,105.1L300.0,104.1L310.0,102.3L320.0,99.8L330.0,97.7L340.0,97.4L350.0,99.6;M20.0,107.9L30.0,106.3L40.0,105.2L50.0,104.6L60.0,103.7L70.0,102.2L80.0,100.0L90.0,98.1L100.0,97.7L110.0,99.8L120.0,103.9L130.0,108.7L140.0,112.2L150.0,112.8L160.0,110.2L170.0,105.4L180.0,100.6L190.0,97.5L200.0,97.0L210.0,98.8L220.0,101.6L230.0,104.0L240.0,105.4L250.0,105.9L260.0,106.3L270.0,107.2L280.0,108.3L290.0,108.7L300.0,107.6L310.0,104.6L320.0,100.5L330.0,96.8L340.0,95.4L350.0,97.1;M20.0,106.6L30.0,107.1L40.0,107.9L50.0,108.3L60.0,107.2L70.0,104.5L80.0,100.5L90.0,97.0L100.0,95.6L110.0,97.2L120.0,101.5L130.0,106.8L140.0,111.0L150.0,112.4L160.0,110.8L170.0,107.2L180.0,103.3L190.0,100.6L200.0,99.7L210.0,100.1L220.0,100.9L230.0,101.4L240.0,101.6L250.0,102.2L260.0,103.8L270.0,106.6L280.0,109.5L290.0,111.3L300.0,110.7L310.0,107.3L320.0,102.3L330.0,97.6L340.0,95.2L350.0,96.0;M20.0,104.1L30.0,106.5L40.0,109.3L50.0,111.0L60.0,110.4L70.0,107.2L80.0,102.3L90.0,97.6L100.0,95.1L110.0,95.9L120.0,99.5L130.0,104.4L140.0,108.4L150.0,110.3L160.0,109.8L170.0,107.9L180.0,105.7L190.0,104.2L200.0,103.4L210.0,102.8L220.0,101.7L230.0,100.0L240.0,98.6L250.0,98.6L260.0,100.8L270.0,104.8L280.0,109.3L290.0,112.3L300.0,112.5L310.0,109.5L320.0,104.6L330.0,99.7L340.0,96.7L350.0,96.6;M20.0,101.0L30.0,104.8L40.0,109.1L50.0,112.2L60.0,112.5L70.0,109.6L80.0,104.6L90.0,99.6L100.0,96.5L110.0,96.3L120.0,98.7L130.0,102.2L140.0,105.3L150.0,107.0L160.0,107.3L170.0,107.1L180.0,107.0L190.0,107.3L200.0,107.3L210.0,106.2L220.0,103.6L230.0,100.1L240.0,97.1L250.0,96.0L260.0,98.0L270.0,102.4L280.0,107.6L290.0,111.6L300.0,112.7L310.0,110.7L320.0,106.6L330.0,102.4L340.0,99.6L350.0,98.8;M20.0,98.1L30.0,102.4L40.0,107.6L50.0,111.6L60.0,112.8L70.0,110.8L80.0,106.7L90.0,102.2L100.0,99.2L110.0,98.4L120.0,99.4L130.0,101.0L140.0,102.4L150.0,103.2L160.0,103.8L170.0,105.0L180.0,106.9L190.0,109.1L200.0,110.4L210.0,109.5L220.0,106.2L230.0,101.5L240.0,97.1L250.0,95.1L260.0,96.2L270.0,100.2L280.0,105.3L290.0,109.4L300.0,111.1L310.0,110.2L320.0,107.7L330.0,105.0L340.0,103.1L350.0,102.3;M20.0,96.2L30.0,100.1L40.0,105.3L50.0,109.6L60.0,111.4L70.0,110.5L80.0,107.8L90.0,104.9L100.0,102.7L110.0,101.8L120.0,101.5L130.0,101.2L140.0,100.5L150.0,99.8L160.0,100.1L170.0,102.0L180.0,105.5L190.0,109.5L200.0,112.1L210.0,112.0L220.0,108.8L230.0,103.7L240.0,98.7L250.0,95.9L260.0,96.1L270.0,98.9L280.0,102.9L290.0,106.3L300.0,108.0L310.0,108.2L320.0,107.4L330.0,106.8L340.0,106.5L350.0,106.2;M20.0,95.9L30.0,98.8L40.0,102.9L50.0,106.6L60.0,108.5L70.0,108.6L80.0,107.6L90.0,106.6L100.0,106.1L110.0,105.7L120.0,104.7L130.0,102.7L140.0,100.0L150.0,97.6L160.0,97.0L170.0,99.0L180.0,103.3L190.0,108.3L200.0,112.1L210.0,112.9L220.0,110.5L230.0,105.9L240.0,101.3L250.0,98.3L260.0,97.7L270.0,99.1L280.0,101.3L290.0,103.2L300.0,104.3L310.0,104.9L320.0,105.7L330.0,107.2L340.0,108.8L350.0,109.6;M20.0,97.3L30.0,98.8L40.0,101.3L50.0,103.5L60.0,104.8L70.0,105.4L80.0,106.0L90.0,107.1L100.0,108.5L110.0,109.2L120.0,108.2L130.0,105.2L140.0,100.9L150.0,97.0L160.0,95.3L170.0,96.7L180.0,100.9L190.0,106.2L200.0,110.4L210.0,112.0L220.0,110.7L230.0,107.5L240.0,104.0L250.0,101.6L260.0,100.7L270.0,100.8L280.0,101.0L290.0,100.9L300.0,100.7L310.0,101.1L320.0,103.0L330.0,106.2L340.0,109.7L350.0,111.8;M20.0,100.2L30.0,100.4L40.0,100.9L50.0,101.1L60.0,101.1L70.0,101.6L80.0,103.3L90.0,106.2L100.0,109.5L110.0,111.5L120.0,111.1L130.0,107.9L140.0,102.8L150.0,98.0L160.0,95.3L170.0,95.9L180.0,99.2L190.0,103.7L200.0,107.6L210.0,109.5L220.0,109.3L230.0,107.8L240.0,106.2L250.0,105.1L260.0,104.5L270.0,103.7L280.0,102.1L290.0,99.9L300.0,98.0L310.0,97.8L320.0,99.9L330.0,104.2L340.0,109.0L350.0,112.3;M20.0,104.0L30.0,103.3L40.0,101.9L50.0,100.0L60.0,98.4L70.0,98.1L80.0,100.2L90.0,104.2L100.0,108.9L110.0,112.2L120.0,112.7L130.0,110.0L140.0,105.2L150.0,100.2L160.0,97.1L170.0,96.8L180.0,98.8L190.0,101.8L200.0,104.4L210.0,105.9L220.0,106.4L230.0,106.6L240.0,107.2L250.0,107.9L260.0,108.2L270.0,107.1L280.0,104.3L290.0,100.3L300.0,96.9L310.0,95.6L320.0,97.4L330.0,101.8L340.0,107.1L350.0,111.1;M20.0,107.8L30.0,106.8L40.0,104.1L50.0,100.4L60.0,97.1L70.0,95.8L80.0,97.5L90.0,101.8L100.0,107.1L110.0,111.2L120.0,112.6L130.0,110.9L140.0,107.1L150.0,103.0L160.0,100.2L170.0,99.3L180.0,99.8L190.0,100.9L200.0,101.7L210.0,102.1L220.0,102.7L230.0,104.2L240.0,106.7L250.0,109.4L260.0,111.0L270.0,110.3L280.0,106.9L290.0,102.0L300.0,97.4L310.0,95.1L320.0,96.0L330.0,99.8L340.0,104.6L350.0,108.6;M20.0,110.7L30.0,110.0L40.0,106.8L50.0,102.0L60.0,97.5L70.0,95.1L80.0,96.0L90.0,99.7L100.0,104.7L110.0,108.8L120.0,110.7L130.0,110.1L140.0,107.9L150.0,105.4L160.0,103.7L170.0,102.9L180.0,102.3L190.0,101.5L200.0,100.1L210.0,99.0L220.0,99.1L230.0,101.2L240.0,105.0L250.0,109.4L260.0,112.3L270.0,112.4L280.0,109.3L290.0,104.3L300.0,99.3L310.0,96.4L320.0,96.4L330.0,98.9L340.0,102.4L350.0,105.4;M20.0,112.1L30.0,112.3L40.0,109.3L50.0,104.3L60.0,99.3L70.0,96.2L80.0,96.1L90.0,98.7L100.0,102.4L110.0,105.7L120.0,107.5L130.0,107.8L140.0,107.3L150.0,106.9L160.0,106.9L170.0,106.7L180.0,105.7L190.0,103.3L200.0,100.0L210.0,97.2L220.0,96.3L230.0,98.3L240.0,102.7L250.0,107.9L260.0,111.8L270.0,112.8L280.0,110.6L290.0,106.4L300.0,102.0L310.0,99.1L320.0,98.4L330.0,99.4L340.0,101.1L350.0,102.4;M20.0,111.8L30.0,112.9L40.0,110.8L50.0,106.5L60.0,101.9L70.0,98.8L80.0,98.0L90.0,99.1L100.0,101.1L110.0,102.7L120.0,103.7L130.0,104.3L140.0,105.3L150.0,107.0L160.0,108.9L170.0,110.0L180.0,109.1L190.0,105.9L200.0,101.3L210.0,97.1L220.0,95.1L230.0,96.4L240.0,100.4L250.0,105.6L260.0,109.7L270.0,111.4L280.0,110.4L290.0,107.7L300.0,104.7L310.0,102.6L320.0,101.7L330.0,101.5L340.0,101.2L350.0,100.4;M20.0,109.9L30.0,111.7L40.0,110.7L50.0,107.8L60.0,104.5L70.0,102.2L80.0,101.2L90.0,101.1L100.0,101.1L110.0,100.7L120.0,100.2L130.0,100.6L140.0,102.4L150.0,105.8L160.0,109.5L170.0,111.9L180.0,111.7L190.0,108.5L200.0,103.4L210.0,98.5L220.0,95.7L230.0,96.0L240.0,99.0L250.0,103.2L260.0,106.7L270.0,108.5L280.0,108.6L290.0,107.6L300.0,106.6L310.0,106.0L320.0,105.6L330.0,104.6L340.0,102.6L350.0,99.8;M20.0,107.0L30.0,109.0L40.0,109.0L50.0,107.8L60.0,106.5L70.0,105.6L80.0,105.1L90.0,104.2L100.0,102.4L110.0,100.0L120.0,97.8L130.0,97.3L140.0,99.4L150.0,103.6L160.0,108.6L170.0,112.2L180.0,112.9L190.0,110.3L200.0,105.7L210.0,100.9L220.0,97.9L230.0,97.3L240.0,98.9L250.0,101.4L260.0,103.6L270.0,104.8L280.0,105.4L290.0,106.0L300.0,107.2L310.0,108.5L320.0,109.2L330.0,108.1L340.0,105.0L350.0,100.6" dur="2.0s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- CPU Worker Pool Threads -->
+    <text x="14" y="144" font-size="9" fill="#94A3B8">CSPRNG / CELERY WORKER POOL (16 THREADS)</text>
+    <rect x="14" y="152" width="344" height="6" rx="2" fill="#1E293B"/>
+    <rect x="14" y="152" width="318" height="6" rx="2" fill="#10B981">
+      <animate attributeName="width" values="304;332;290;324;304" dur="1.8s" repeatCount="indefinite"/>
+    </rect>
+    <text x="14" y="170" font-size="8.5" fill="#64748B">LOAD AVG: 1.42 · CONTEXT SWITCHES: MINIMAL</text>
+  </g>
+
+  <!-- Bottom Tmux Status Bar -->
+  <rect x="1" y="240" width="1198" height="23" rx="6" fill="#0B111E"/>
+  <rect x="1" y="240" width="148" height="23" fill="#10B981"/>
+  <text x="14" y="255" class="font-mono" font-size="10" font-weight="800" fill="#05080F">[0] benchmarks*</text>
+  <text x="166" y="255" class="font-mono" font-size="10" fill="#94A3B8">0:zsh-  1:nvtop*  2:celery-workers</text>
+  <text x="960" y="255" class="font-mono" font-size="10" fill="#38BDF8">Debian WSL2 · CUDA 12.4 · UTF-8</text>
 </svg>
