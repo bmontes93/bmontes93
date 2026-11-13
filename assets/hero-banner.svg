@@ -1,0 +1,306 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070A10"/>
+      <stop offset="50%" stop-color="#0B101B"/>
+      <stop offset="100%" stop-color="#090D16"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111827" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0B0F19" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <linearGradient id="scanBeam" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#818CF8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </linearGradient>
+
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1E293B" stroke-width="0.6" stroke-opacity="0.45"/>
+    </pattern>
+
+    <pattern id="subGrid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="#1E293B" stroke-width="0.5" stroke-opacity="0.35"/>
+    </pattern>
+
+    <clipPath id="scannerClip">
+      <rect x="656" y="64" width="220" height="228" rx="8"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, Helvetica, sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace; }
+
+    @keyframes pulseDot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.45); opacity: 0.35; }
+    }
+
+    @keyframes scanSweep {
+      0% { transform: translateY(-20px); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(230px); opacity: 0; }
+    }
+
+    @keyframes meshGlow {
+      0%, 100% { opacity: 0.45; }
+      50% { opacity: 0.95; }
+    }
+
+    @keyframes nodeBlink {
+      0%, 100% { opacity: 0.3; transform: scale(0.92); }
+      50% { opacity: 1; transform: scale(1.08); }
+    }
+
+    @keyframes dashFlow {
+      to { stroke-dashoffset: -48; }
+    }
+
+    @keyframes barPulse1 {
+      0%, 100% { transform: scaleX(0.92); }
+      50% { transform: scaleX(1); }
+    }
+
+    .pulse-ring {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: pulseDot 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+    }
+
+    .scan-group {
+      animation: scanSweep 3.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+
+    .mesh-active {
+      animation: meshGlow 3.8s ease-in-out infinite;
+    }
+
+    .flow-line {
+      stroke-dasharray: 6 6;
+      animation: dashFlow 1.6s linear infinite;
+    }
+
+    .node-p1 { transform-box: fill-box; transform-origin: center; animation: nodeBlink 2.2s ease-in-out infinite; }
+    .node-p2 { transform-box: fill-box; transform-origin: center; animation: nodeBlink 2.2s ease-in-out 0.6s infinite; }
+    .node-p3 { transform-box: fill-box; transform-origin: center; animation: nodeBlink 2.2s ease-in-out 1.2s infinite; }
+    .bar-anim { transform-box: fill-box; transform-origin: left; animation: barPulse1 3s ease-in-out infinite; }
+  </style>
+
+  <!-- Main Canvas Background -->
+  <rect width="1200" height="380" rx="14" fill="url(#bgGrad)" stroke="#1E293B" stroke-width="1.5"/>
+  <rect width="1200" height="380" rx="14" fill="url(#grid)"/>
+
+  <!-- Subtle Ambient Top Highlight -->
+  <rect x="48" y="1" width="520" height="2" fill="url(#accentLine)"/>
+
+  <!-- ==================== LEFT COLUMN: IDENTITY & TELEMETRY ==================== -->
+  <!-- Status Pill -->
+  <g transform="translate(48, 38)">
+    <rect width="296" height="28" rx="14" fill="#0F172A" stroke="#1E293B" stroke-width="1"/>
+    <circle cx="16" cy="14" r="5" fill="#10B981" class="pulse-ring"/>
+    <circle cx="16" cy="14" r="3.5" fill="#10B981"/>
+    <text x="30" y="18" class="font-mono" font-size="11" font-weight="600" fill="#E2E8F0" letter-spacing="0.8">PRODUCTION SYSTEMS ONLINE · UTC-5</text>
+  </g>
+
+  <!-- Name & Handle -->
+  <g transform="translate(48, 108)">
+    <text x="0" y="0" class="font-sans" font-size="42" font-weight="800" fill="#F8FAFC" letter-spacing="-1.2">Bryan Montes</text>
+    <text x="278" y="0" class="font-mono" font-size="22" font-weight="500" fill="#38BDF8" letter-spacing="-0.4">/ Thekerdruid</text>
+    <text x="0" y="34" class="font-sans" font-size="17" font-weight="600" fill="#94A3B8" letter-spacing="-0.2">
+      Senior Full Stack &amp; Systems Engineer · AI Inference &amp; High-Concurrency Architectures
+    </text>
+  </g>
+
+  <!-- Domain Capability Pills -->
+  <g transform="translate(48, 168)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="142" height="30" rx="6" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+    <rect x="10" y="11" width="8" height="8" rx="2" fill="#38BDF8"/>
+    <text x="26" y="19" class="font-mono" font-size="11.5" font-weight="600" fill="#E2E8F0">ONNX / CUDA FP16</text>
+
+    <!-- Pill 2 -->
+    <rect x="152" y="0" width="148" height="30" rx="6" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+    <rect x="162" y="11" width="8" height="8" rx="2" fill="#10B981"/>
+    <text x="178" y="19" class="font-mono" font-size="11.5" font-weight="600" fill="#E2E8F0">XGBoost / LightGBM</text>
+
+    <!-- Pill 3 -->
+    <rect x="310" y="0" width="138" height="30" rx="6" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+    <rect x="320" y="11" width="8" height="8" rx="2" fill="#818CF8"/>
+    <text x="336" y="19" class="font-mono" font-size="11.5" font-weight="600" fill="#E2E8F0">CSPRNG Monte Carlo</text>
+
+    <!-- Pill 4 -->
+    <rect x="458" y="0" width="132" height="30" rx="6" fill="#111827" stroke="#1E293B" stroke-width="1"/>
+    <rect x="468" y="11" width="8" height="8" rx="2" fill="#F59E0B"/>
+    <text x="484" y="19" class="font-mono" font-size="11.5" font-weight="600" fill="#E2E8F0">Next.js 15 + 3D</text>
+  </g>
+
+  <!-- Live Telemetry Readouts (Bottom Left) -->
+  <g transform="translate(48, 226)">
+    <rect width="542" height="118" rx="10" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1"/>
+    <text x="20" y="26" class="font-mono" font-size="10.5" font-weight="700" fill="#64748B" letter-spacing="1.2">BENCHMARKS EN TIEMPO REAL · VERIFIED METRICS</text>
+    <line x1="20" y1="36" x2="522" y2="36" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Metric 1 -->
+    <g transform="translate(20, 52)">
+      <text x="0" y="12" class="font-mono" font-size="11" fill="#94A3B8">EXON-FACE INFERENCE</text>
+      <text x="0" y="36" class="font-mono" font-size="22" font-weight="700" fill="#38BDF8">11.4 ms</text>
+      <text x="95" y="35" class="font-mono" font-size="10.5" fill="#64748B">/ frame (FP16)</text>
+      <rect x="0" y="46" width="145" height="4" rx="2" fill="#1E293B"/>
+      <rect x="0" y="46" width="132" height="4" rx="2" fill="#38BDF8" class="bar-anim"/>
+    </g>
+
+    <line x1="190" y1="46" x2="190" y2="104" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Metric 2 -->
+    <g transform="translate(208, 52)">
+      <text x="0" y="12" class="font-mono" font-size="11" fill="#94A3B8">QUANTSLOT ENGINE</text>
+      <text x="0" y="36" class="font-mono" font-size="22" font-weight="700" fill="#818CF8">1.42M</text>
+      <text x="76" y="35" class="font-mono" font-size="10.5" fill="#64748B">giros / seg</text>
+      <rect x="0" y="46" width="145" height="4" rx="2" fill="#1E293B"/>
+      <rect x="0" y="46" width="138" height="4" rx="2" fill="#818CF8" class="bar-anim"/>
+    </g>
+
+    <line x1="376" y1="46" x2="376" y2="104" stroke="#1E293B" stroke-width="1"/>
+
+    <!-- Metric 3 -->
+    <g transform="translate(394, 52)">
+      <text x="0" y="12" class="font-mono" font-size="11" fill="#94A3B8">CORE WEB VITALS</text>
+      <text x="0" y="36" class="font-mono" font-size="22" font-weight="700" fill="#10B981">98 / 100</text>
+      <text x="96" y="35" class="font-mono" font-size="10.5" fill="#64748B">60 FPS</text>
+      <rect x="0" y="46" width="128" height="4" rx="2" fill="#1E293B"/>
+      <rect x="0" y="46" width="124" height="4" rx="2" fill="#10B981" class="bar-anim"/>
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT COLUMN: LIVE VISION & PIPELINE HUD ==================== -->
+  <g transform="translate(636, 26)">
+    <!-- Outer HUD Window -->
+    <rect width="524" height="328" rx="12" fill="url(#cardGrad)" stroke="#1E293B" stroke-width="1.5"/>
+
+    <!-- Window Top Bar -->
+    <rect width="524" height="32" rx="12" fill="#0F172A"/>
+    <rect y="20" width="524" height="12" fill="#0F172A"/>
+    <line x1="0" y1="32" x2="524" y2="32" stroke="#1E293B" stroke-width="1"/>
+    <circle cx="18" cy="16" r="4.5" fill="#334155"/>
+    <circle cx="32" cy="16" r="4.5" fill="#334155"/>
+    <circle cx="46" cy="16" r="4.5" fill="#334155"/>
+    <text x="66" y="20" class="font-mono" font-size="11" font-weight="600" fill="#94A3B8">exon_face_pipeline.py — CUDA:0 [NVIDIA TensorRT FP16]</text>
+    <rect x="446" y="8" width="66" height="16" rx="4" fill="#064E3B"/>
+    <text x="455" y="19" class="font-mono" font-size="9.5" font-weight="700" fill="#34D399">60.0 FPS</text>
+
+    <!-- LEFT SUB-PANEL: BiSeNet Wireframe Vision Scanner -->
+    <g transform="translate(20, 44)">
+      <rect width="212" height="222" rx="8" fill="#070A10" stroke="#1E293B" stroke-width="1"/>
+      <rect width="212" height="222" rx="8" fill="url(#subGrid)"/>
+
+      <!-- Target Reticle Corner Brackets -->
+      <path d="M 16 32 L 16 18 L 30 18" fill="none" stroke="#38BDF8" stroke-width="1.8"/>
+      <path d="M 196 32 L 196 18 L 182 18" fill="none" stroke="#38BDF8" stroke-width="1.8"/>
+      <path d="M 16 176 L 16 190 L 30 190" fill="none" stroke="#38BDF8" stroke-width="1.8"/>
+      <path d="M 196 176 L 196 190 L 182 190" fill="none" stroke="#38BDF8" stroke-width="1.8"/>
+
+      <!-- Geometric Face Mesh (68-Point Landmark Topology) -->
+      <g transform="translate(106, 102)" class="mesh-active">
+        <!-- Outer Jaw & Cranium Contour -->
+        <polygon points="0,-64 38,-54 52,-22 46,20 28,52 0,66 -28,52 -46,20 -52,-22 -38,-54" fill="#0EA5E9" fill-opacity="0.06" stroke="#38BDF8" stroke-width="1" stroke-opacity="0.65"/>
+        <!-- Inner Cheek & Forehead Triangulation -->
+        <path d="M -38,-54 L 0,-34 L 38,-54 M -52,-22 L -22,-18 L 0,-34 L 22,-18 L 52,-22" fill="none" stroke="#38BDF8" stroke-width="0.75" stroke-opacity="0.5"/>
+        <path d="M -46,20 L -20,8 L 0,14 L 20,8 L 46,20" fill="none" stroke="#38BDF8" stroke-width="0.75" stroke-opacity="0.5"/>
+        <path d="M -28,52 L -16,32 L 0,42 L 16,32 L 28,52" fill="none" stroke="#38BDF8" stroke-width="0.75" stroke-opacity="0.5"/>
+        <path d="M 0,-64 L 0,42 M -22,-18 L -20,8 L -16,32 M 22,-18 L 20,8 L 16,32" fill="none" stroke="#38BDF8" stroke-width="0.6" stroke-opacity="0.4"/>
+
+        <!-- Left Eye Segmentation Polygon -->
+        <polygon points="-34,-12 -22,-18 -10,-12 -22,-7" fill="#10B981" fill-opacity="0.25" stroke="#10B981" stroke-width="1.2"/>
+        <!-- Right Eye Segmentation Polygon -->
+        <polygon points="10,-12 22,-18 34,-12 22,-7" fill="#10B981" fill-opacity="0.25" stroke="#10B981" stroke-width="1.2"/>
+
+        <!-- Nose Bridge & Tip -->
+        <polygon points="0,-18 -9,10 0,15 9,10" fill="#38BDF8" fill-opacity="0.18" stroke="#38BDF8" stroke-width="1"/>
+
+        <!-- Mouth Segmentation Mask -->
+        <polygon points="-20,28 -8,23 0,25 8,23 20,28 10,36 0,38 -10,36" fill="#818CF8" fill-opacity="0.28" stroke="#818CF8" stroke-width="1.2"/>
+
+        <!-- Key Facial Landmarks (Vertices) -->
+        <circle cx="0" cy="-64" r="2" fill="#38BDF8"/>
+        <circle cx="-38" cy="-54" r="2" fill="#38BDF8"/>
+        <circle cx="38" cy="-54" r="2" fill="#38BDF8"/>
+        <circle cx="-22" cy="-12" r="2.2" fill="#10B981"/>
+        <circle cx="22" cy="-12" r="2.2" fill="#10B981"/>
+        <circle cx="0" cy="10" r="2" fill="#38BDF8"/>
+        <circle cx="-20" cy="28" r="2" fill="#818CF8"/>
+        <circle cx="20" cy="28" r="2" fill="#818CF8"/>
+        <circle cx="0" cy="66" r="2" fill="#38BDF8"/>
+      </g>
+
+      <!-- Bottom Readout inside Scanner -->
+      <rect x="8" y="196" width="196" height="18" rx="4" fill="#0F172A" fill-opacity="0.9"/>
+      <text x="14" y="208" class="font-mono" font-size="9.5" fill="#38BDF8">MASK: BiSeNet_v2 · mIoU 0.992</text>
+    </g>
+
+    <!-- Animated Laser Scan Sweep clipped to Scanner Box -->
+    <g clip-path="url(#scannerClip)">
+      <g class="scan-group">
+        <rect x="656" y="44" width="212" height="22" fill="url(#scanBeam)" transform="translate(-636, 0)"/>
+        <line x1="20" y1="66" x2="232" y2="66" stroke="#38BDF8" stroke-width="1.5"/>
+      </g>
+    </g>
+
+    <!-- RIGHT SUB-PANEL: Real Production Code & Neural Execution -->
+    <g transform="translate(246, 44)">
+      <rect width="258" height="148" rx="8" fill="#070A10" stroke="#1E293B" stroke-width="1"/>
+      <text x="12" y="20" class="font-mono" font-size="10.5" fill="#64748B"># Real-Time ONNX FP16 Inference</text>
+      <text x="12" y="38" class="font-mono" font-size="10.5" fill="#818CF8">sess <tspan fill="#F8FAFC">=</tspan> <tspan fill="#38BDF8">ort.InferenceSession</tspan><tspan fill="#F8FAFC">(</tspan></text>
+      <text x="24" y="54" class="font-mono" font-size="10.5" fill="#34D399">"bisenet_fp16.onnx"<tspan fill="#F8FAFC">,</tspan></text>
+      <text x="24" y="70" class="font-mono" font-size="10.5" fill="#94A3B8">providers<tspan fill="#F8FAFC">=[</tspan><tspan fill="#34D399">"CUDAExecutionProvider"</tspan><tspan fill="#F8FAFC">]</tspan></text>
+      <text x="12" y="86" class="font-mono" font-size="10.5" fill="#F8FAFC">)</text>
+      <text x="12" y="106" class="font-mono" font-size="10.5" fill="#F8FAFC">mask = sess.run(<tspan fill="#F59E0B">None</tspan>, {<tspan fill="#34D399">"x"</tspan>: fp16_t})</text>
+      <text x="12" y="124" class="font-mono" font-size="10.5" fill="#F8FAFC">out = <tspan fill="#38BDF8">codeformer.restore</tspan>(frame, mask)</text>
+      <text x="12" y="140" class="font-mono" font-size="10" fill="#10B981">&gt;&gt; CUDA Stream Sync: 11.4ms [OK]</text>
+
+      <!-- Live Pipeline Node Graph -->
+      <rect y="158" width="258" height="64" rx="8" fill="#070A10" stroke="#1E293B" stroke-width="1"/>
+      <text x="12" y="174" class="font-mono" font-size="9.5" font-weight="600" fill="#64748B">LIVE EXECUTION PIPELINE</text>
+
+      <!-- Connecting Animated Flow Lines -->
+      <line x1="56" y1="198" x2="112" y2="198" stroke="#38BDF8" stroke-width="1.5" class="flow-line"/>
+      <line x1="148" y1="198" x2="204" y2="198" stroke="#10B981" stroke-width="1.5" class="flow-line"/>
+
+      <!-- Node 1 -->
+      <g class="node-p1">
+        <rect x="14" y="185" width="46" height="26" rx="5" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2"/>
+        <text x="22" y="202" class="font-mono" font-size="9.5" font-weight="700" fill="#38BDF8">FP16</text>
+      </g>
+
+      <!-- Node 2 -->
+      <g class="node-p2">
+        <rect x="104" y="185" width="52" height="26" rx="5" fill="#0F172A" stroke="#818CF8" stroke-width="1.2"/>
+        <text x="112" y="202" class="font-mono" font-size="9.5" font-weight="700" fill="#818CF8">ONNX</text>
+      </g>
+
+      <!-- Node 3 -->
+      <g class="node-p3">
+        <rect x="198" y="185" width="48" height="26" rx="5" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+        <text x="205" y="202" class="font-mono" font-size="9.5" font-weight="700" fill="#10B981">OUT</text>
+      </g>
+    </g>
+
+    <!-- Bottom Status Strip inside Right HUD -->
+    <g transform="translate(20, 278)">
+      <rect width="484" height="34" rx="6" fill="#070A10" stroke="#1E293B" stroke-width="1"/>
+      <circle cx="16" cy="17" r="4" fill="#38BDF8"/>
+      <text x="28" y="21" class="font-mono" font-size="10.5" fill="#E2E8F0">VRAM: 2.14 GB / 16.0 GB</text>
+      <text x="196" y="21" class="font-mono" font-size="10.5" fill="#94A3B8">BATCH: 1 (REALTIME)</text>
+      <text x="348" y="21" class="font-mono" font-size="10.5" fill="#10B981">CSPRNG &amp; CI: VERIFIED</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 310" width="100%" height="100%">
+  <defs>
+    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070A10"/>
+      <stop offset="100%" stop-color="#0B101B"/>
+    </linearGradient>
+
+    <pattern id="archGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#1E293B" stroke-width="0.5" stroke-opacity="0.4"/>
+    </pattern>
+
+    <!-- Motion Paths for Live Data Packets -->
+    <path id="pathEdgeToApi" d="M 254,155 L 346,155" fill="none"/>
+    <path id="pathApiToRedis" d="M 556,120 L 644,95" fill="none"/>
+    <path id="pathApiToPg" d="M 556,190 L 644,215" fill="none"/>
+    <path id="pathRedisToGpu" d="M 854,95 L 942,95" fill="none"/>
+    <path id="pathGpuToObs" d="M 1052,135 L 1052,180" fill="none"/>
+  </defs>
+
+  <style>
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, Helvetica, sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, monospace; }
+
+    @keyframes pipeFlow {
+      to { stroke-dashoffset: -36; }
+    }
+
+    @keyframes nodeGlow {
+      0%, 100% { stroke-opacity: 0.5; }
+      50% { stroke-opacity: 1; }
+    }
+
+    .pipe-active {
+      stroke-dasharray: 6 6;
+      animation: pipeFlow 1.4s linear infinite;
+    }
+
+    .box-pulse {
+      animation: nodeGlow 2.8s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="310" rx="12" fill="url(#archBg)" stroke="#1E293B" stroke-width="1.5"/>
+  <rect width="1200" height="310" rx="12" fill="url(#archGrid)"/>
+
+  <!-- Header Bar -->
+  <text x="32" y="34" class="font-mono" font-size="11" font-weight="700" fill="#38BDF8" letter-spacing="1.2">BLUEPRINT DE ARQUITECTURA DISTRIBUIDA · LIVE DATAFLOW TELEMETRY</text>
+  <text x="938" y="34" class="font-mono" font-size="10.5" fill="#10B981">● ZERO-DOWNTIME · DOCKER &amp; CI/CD</text>
+  <line x1="32" y1="46" x2="1168" y2="46" stroke="#1E293B" stroke-width="1"/>
+
+  <!-- ==================== CONNECTING PIPELINES ==================== -->
+  <line x1="254" y1="155" x2="346" y2="155" stroke="#38BDF8" stroke-width="2" class="pipe-active"/>
+  <line x1="556" y1="120" x2="644" y2="95" stroke="#818CF8" stroke-width="2" class="pipe-active"/>
+  <line x1="556" y1="190" x2="644" y2="215" stroke="#10B981" stroke-width="2" class="pipe-active"/>
+  <line x1="854" y1="95" x2="942" y2="95" stroke="#38BDF8" stroke-width="2" class="pipe-active"/>
+  <line x1="854" y1="215" x2="942" y2="215" stroke="#10B981" stroke-width="1.5" class="pipe-active"/>
+  <line x1="1052" y1="135" x2="1052" y2="175" stroke="#F59E0B" stroke-width="1.5" class="pipe-active"/>
+
+  <!-- Animated Data Packets Traveling Along Paths -->
+  <circle r="4" fill="#38BDF8">
+    <animateMotion dur="1.4s" repeatCount="indefinite"><mpath href="#pathEdgeToApi"/></animateMotion>
+  </circle>
+  <circle r="4" fill="#818CF8">
+    <animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#pathApiToRedis"/></animateMotion>
+  </circle>
+  <circle r="4" fill="#10B981">
+    <animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#pathApiToPg"/></animateMotion>
+  </circle>
+  <circle r="4" fill="#38BDF8">
+    <animateMotion dur="1.3s" repeatCount="indefinite"><mpath href="#pathRedisToGpu"/></animateMotion>
+  </circle>
+
+  <!-- ==================== STAGE 1: EDGE & WAF ==================== -->
+  <g transform="translate(34, 82)">
+    <rect width="220" height="146" rx="10" fill="#0F172A" stroke="#38BDF8" stroke-width="1.2" class="box-pulse"/>
+    <text x="16" y="26" class="font-mono" font-size="10" font-weight="700" fill="#38BDF8">01 · PERÍMETRO &amp; EDGE</text>
+    <line x1="16" y1="34" x2="204" y2="34" stroke="#1E293B" stroke-width="1"/>
+    <text x="16" y="56" class="font-sans" font-size="13" font-weight="700" fill="#F8FAFC">Cloudflare WAF &amp; CDN</text>
+    <text x="16" y="76" class="font-mono" font-size="10.5" fill="#94A3B8">• Terminación TLS 1.3</text>
+    <text x="16" y="94" class="font-mono" font-size="10.5" fill="#94A3B8">• Rate Limiting DDoS</text>
+    <text x="16" y="112" class="font-mono" font-size="10.5" fill="#94A3B8">• Reverse Proxy Ingress</text>
+    <rect x="16" y="122" width="188" height="16" rx="3" fill="#070A10"/>
+    <text x="24" y="133" class="font-mono" font-size="9" fill="#38BDF8">P99 Edge Latency: 8.2 ms</text>
+  </g>
+
+  <!-- ==================== STAGE 2: API GATEWAY & CORE ==================== -->
+  <g transform="translate(346, 82)">
+    <rect width="210" height="146" rx="10" fill="#0F172A" stroke="#818CF8" stroke-width="1.2" class="box-pulse"/>
+    <text x="16" y="26" class="font-mono" font-size="10" font-weight="700" fill="#818CF8">02 · API GATEWAY</text>
+    <line x1="16" y1="34" x2="194" y2="34" stroke="#1E293B" stroke-width="1"/>
+    <text x="16" y="56" class="font-sans" font-size="13" font-weight="700" fill="#F8FAFC">FastAPI / Node.js Core</text>
+    <text x="16" y="76" class="font-mono" font-size="10.5" fill="#94A3B8">• Pydantic / Zod Strict</text>
+    <text x="16" y="94" class="font-mono" font-size="10.5" fill="#94A3B8">• JWT Rotation + Argon2</text>
+    <text x="16" y="112" class="font-mono" font-size="10.5" fill="#94A3B8">• CQRS Service Layer</text>
+    <rect x="16" y="122" width="178" height="16" rx="3" fill="#070A10"/>
+    <text x="24" y="133" class="font-mono" font-size="9" fill="#818CF8">Async I/O Event Loop</text>
+  </g>
+
+  <!-- ==================== STAGE 3A: MESSAGE BROKER & WORKERS ==================== -->
+  <g transform="translate(644, 60)">
+    <rect width="210" height="78" rx="8" fill="#0F172A" stroke="#818CF8" stroke-width="1.2"/>
+    <text x="14" y="22" class="font-mono" font-size="9.5" font-weight="700" fill="#818CF8">03A · EVENT BUS &amp; QUEUES</text>
+    <text x="14" y="42" class="font-sans" font-size="12.5" font-weight="700" fill="#F8FAFC">Redis Broker + Celery</text>
+    <text x="14" y="60" class="font-mono" font-size="10" fill="#94A3B8">Worker Pools · FSM States</text>
+  </g>
+
+  <!-- ==================== STAGE 3B: ACID PERSISTENCE ==================== -->
+  <g transform="translate(644, 172)">
+    <rect width="210" height="78" rx="8" fill="#0F172A" stroke="#10B981" stroke-width="1.2"/>
+    <text x="14" y="22" class="font-mono" font-size="9.5" font-weight="700" fill="#10B981">03B · PERSISTENCIA &amp; CACHÉ</text>
+    <text x="14" y="42" class="font-sans" font-size="12.5" font-weight="700" fill="#F8FAFC">PostgreSQL + Redis L2</text>
+    <text x="14" y="60" class="font-mono" font-size="10" fill="#94A3B8">SQLAlchemy 2.0 · Prisma ORM</text>
+  </g>
+
+  <!-- ==================== STAGE 4A: GPU INFERENCE & MATH ENGINE ==================== -->
+  <g transform="translate(942, 60)">
+    <rect width="224" height="78" rx="8" fill="#0F172A" stroke="#38BDF8" stroke-width="1.4" class="box-pulse"/>
+    <text x="14" y="22" class="font-mono" font-size="9.5" font-weight="700" fill="#38BDF8">04A · ACELERACIÓN GPU / IA</text>
+    <text x="14" y="42" class="font-sans" font-size="12.5" font-weight="700" fill="#F8FAFC">ONNX CUDA FP16 &amp; ML</text>
+    <text x="14" y="60" class="font-mono" font-size="10" fill="#34D399">TensorRT · XGBoost · CSPRNG</text>
+  </g>
+
+  <!-- ==================== STAGE 4B: OBSERVABILITY ==================== -->
+  <g transform="translate(942, 172)">
+    <rect width="224" height="78" rx="8" fill="#0F172A" stroke="#F59E0B" stroke-width="1.2"/>
+    <text x="14" y="22" class="font-mono" font-size="9.5" font-weight="700" fill="#F59E0B">04B · OBSERVABILIDAD</text>
+    <text x="14" y="42" class="font-sans" font-size="12.5" font-weight="700" fill="#F8FAFC">Prometheus &amp; Tracing</text>
+    <text x="14" y="60" class="font-mono" font-size="10" fill="#94A3B8">Structured Logs · Healthchecks</text>
+  </g>
+
+  <!-- Bottom Legend Bar -->
+  <text x="34" y="286" class="font-mono" font-size="10" fill="#64748B">
+    FLUJO DE DATOS EN VIVO: [Ingress TLS] → [Validación Esquemas] → [Despacho Asíncrono Redis] → [Inferencia GPU / Transacción ACID]
+  </text>
+</svg>

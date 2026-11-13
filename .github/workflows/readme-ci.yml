@@ -1,4 +1,4 @@
-name: Profile Quality CI
+name: Profile Quality CI & Snake Generator
 
 on:
   push:
@@ -6,27 +6,49 @@ on:
   pull_request:
     branches: [ main ]
   schedule:
-    - cron: '0 4 * * *' # Validación automatizada diaria a las 04:00 UTC
+    - cron: '0 4 * * *'
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   validate:
-    name: Markdown & Integrity Checks
+    name: Markdown & SVG Integrity Checks
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Validate README Integrity
+      - name: Validate README & Custom Animated SVGs
         run: |
-          echo "Validating README.md structure and required sections..."
+          echo "Validating README.md and custom vector assets..."
           test -f README.md || { echo "README.md not found"; exit 1; }
+          test -f assets/hero-banner.svg || { echo "hero-banner.svg missing"; exit 1; }
+          test -f assets/projects-bento.svg || { echo "projects-bento.svg missing"; exit 1; }
+          test -f assets/architecture-live.svg || { echo "architecture-live.svg missing"; exit 1; }
+          test -f assets/terminal-bench.svg || { echo "terminal-bench.svg missing"; exit 1; }
           grep -q "Bryan Montes" README.md || { echo "Author name missing"; exit 1; }
           grep -q "EXON-FACE" README.md || { echo "Showcase project missing"; exit 1; }
-          grep -q "Blueprint de Arquitectura" README.md || { echo "Blueprint section missing"; exit 1; }
-          echo "Integrity and syntax checks passed successfully."
+          echo "All custom SVG telemetry assets and README integrity checks passed."
+
+  build-snake:
+    name: Generate Dark Contribution Snake
+    runs-on: ubuntu-latest
+    needs: validate
+    if: github.event_name != 'pull_request'
+    steps:
+      - name: Generate github-contribution-grid-snake-dark.svg
+        uses: platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#38bdf8&color_dots=#0f172a,#0c4a6e,#0284c7,#38bdf8,#10b981
+
+      - name: Push Snake SVG to output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
